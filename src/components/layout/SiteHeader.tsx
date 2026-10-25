@@ -1,7 +1,7 @@
 import React, { useState, useEffect, useRef } from 'react';
 import { Link, NavLink, useLocation } from 'react-router-dom';
 import { siteConfig } from '../../config/siteConfig';
-import { Globe, ChevronDown, Menu, X, ArrowRight, Server, Shield, Headphones } from 'lucide-react';
+import { Globe, ChevronDown, Menu, X, ArrowRight, Camera, Network, Headphones } from 'lucide-react';
 import './SiteHeader.css';
 
 export const SiteHeader: React.FC = () => {
@@ -91,8 +91,8 @@ export const SiteHeader: React.FC = () => {
                   {siteConfig.navigation.servicesMenu.categories.map((cat, idx) => (
                     <div key={idx} className="megamenu-column">
                       <div className="megamenu-col-header">
-                        {idx === 0 && <Server size={16} className="megamenu-icon" />}
-                        {idx === 1 && <Shield size={16} className="megamenu-icon" />}
+                        {idx === 0 && <Camera size={16} className="megamenu-icon" />}
+                        {idx === 1 && <Network size={16} className="megamenu-icon" />}
                         {idx === 2 && <Headphones size={16} className="megamenu-icon" />}
                         <span className="megamenu-cat-title">{cat.categoryTitle}</span>
                       </div>

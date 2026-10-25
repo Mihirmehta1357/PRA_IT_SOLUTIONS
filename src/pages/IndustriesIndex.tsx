@@ -161,7 +161,7 @@ export const IndustriesIndex: React.FC = () => {
 
       <CTASection
         title="Don't see your specific industry listed?"
-        subtitle="Our core infrastructure—structured cabling, managed switching, firewalls, and preventive maintenance—applies to any facility requiring reliable technology."
+        subtitle="Our core infrastructure—structured cabling, managed switching, CCTV surveillance, and preventive maintenance—applies to any facility requiring reliable technology."
         primaryCtaText="Speak with an Engineer"
         primaryCtaLink="/contact"
       />

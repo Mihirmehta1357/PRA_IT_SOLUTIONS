@@ -84,7 +84,7 @@ export const About: React.FC = () => {
                   Modern corporate and operational environments have outgrown ad-hoc computer repairmen and generic retail electronics. In a high-throughput distribution hub, a dropped Wi-Fi signal stalls order dispatches. In a corporate headquarters, an unpatched server can compromise financial databases.
                 </p>
                 <p>
-                  <strong>PRA IT SOLUTIONS</strong> bridges the gap between complex enterprise IT standards and hands-on operational reality. We design, deploy, and maintain the silent infrastructure that keeps businesses connected: structured copper and fiber cabling, server room thermal engineering, next-gen firewalls, biometric access, and multi-location managed IT support.
+                  <strong>PRA IT SOLUTIONS</strong> bridges the gap between complex enterprise IT standards and hands-on operational reality. We design, deploy, and maintain the silent infrastructure that keeps businesses connected: structured copper and fiber cabling, server room thermal engineering, high-definition CCTV surveillance, biometric access, and multi-location managed IT support.
                 </p>
                 <p>
                   Our positioning is rooted in operational reliability: we serve transport operators, distribution warehouses, manufacturing plants, and multi-branch commercial businesses with equal technical rigor.

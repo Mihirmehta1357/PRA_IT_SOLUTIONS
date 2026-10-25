@@ -1,0 +1,295 @@
+.floating-contact-container {
+  position: fixed;
+  bottom: 24px;
+  right: 24px;
+  z-index: 999;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 12px;
+  font-family: var(--font-sans, 'Inter', sans-serif);
+}
+
+/* Floating Trigger Group */
+.floating-trigger-group {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.floating-bubble-whatsapp {
+  position: relative;
+  width: 52px;
+  height: 52px;
+  border-radius: 50%;
+  background: #25D366;
+  color: #FFFFFF;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 4px 16px rgba(37, 211, 102, 0.4);
+  transition: transform 0.25s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.25s ease;
+  text-decoration: none;
+}
+
+.floating-bubble-whatsapp:hover {
+  transform: translateY(-3px) scale(1.05);
+  box-shadow: 0 8px 24px rgba(37, 211, 102, 0.55);
+}
+
+.floating-bubble-main {
+  position: relative;
+  width: 52px;
+  height: 52px;
+  border-radius: 50%;
+  background: var(--color-copper, #B85F3B);
+  color: #FFFFFF;
+  border: 2px solid #F4EDE1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  box-shadow: 0 6px 20px rgba(184, 95, 59, 0.45);
+  transition: transform 0.25s cubic-bezier(0.16, 1, 0.3, 1), background-color 0.2s ease, box-shadow 0.25s ease;
+}
+
+.floating-bubble-main:hover {
+  transform: translateY(-3px) scale(1.05);
+  background: #C96D48;
+  box-shadow: 0 10px 28px rgba(184, 95, 59, 0.6);
+}
+
+.floating-bubble-main.is-active {
+  background: var(--color-plum, #291A2B);
+  border-color: var(--color-copper, #B85F3B);
+}
+
+.bubble-pulse {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  border-radius: 50%;
+  border: 2px solid var(--color-copper, #B85F3B);
+  animation: pulse-ring 2.2s infinite;
+  pointer-events: none;
+}
+
+@keyframes pulse-ring {
+  0% {
+    transform: scale(0.95);
+    opacity: 0.8;
+  }
+  50% {
+    transform: scale(1.35);
+    opacity: 0;
+  }
+  100% {
+    transform: scale(1.35);
+    opacity: 0;
+  }
+}
+
+.bubble-tooltip {
+  position: absolute;
+  right: 64px;
+  background: var(--color-plum, #291A2B);
+  color: var(--color-ivory, #F4EDE1);
+  font-size: 0.75rem;
+  font-weight: 500;
+  padding: 6px 12px;
+  border-radius: 4px;
+  white-space: nowrap;
+  pointer-events: none;
+  opacity: 0;
+  transform: translateX(8px);
+  transition: opacity 0.2s ease, transform 0.2s ease;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+  border: 1px solid rgba(244, 237, 225, 0.15);
+}
+
+.floating-bubble-whatsapp:hover .bubble-tooltip {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+/* Expanded Card */
+.floating-card {
+  width: 320px;
+  background: #FFFFFF;
+  border: 1px solid rgba(41, 26, 43, 0.15);
+  border-radius: 12px;
+  box-shadow: 0 16px 40px rgba(41, 26, 43, 0.22);
+  overflow: hidden;
+  animation: slide-up-fade 0.28s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+@keyframes slide-up-fade {
+  from {
+    opacity: 0;
+    transform: translateY(16px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.floating-card-header {
+  background: var(--color-plum, #291A2B);
+  color: var(--color-ivory, #F4EDE1);
+  padding: 14px 16px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-bottom: 2px solid var(--color-copper, #B85F3B);
+}
+
+.floating-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 0.68rem;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  color: #8CE8AD;
+  font-weight: 600;
+  margin-bottom: 2px;
+}
+
+.pulse-dot {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: #34D399;
+  display: inline-block;
+  animation: blink 1.4s infinite;
+}
+
+@keyframes blink {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.3; }
+}
+
+.floating-title {
+  margin: 0;
+  font-size: 0.95rem;
+  font-family: var(--font-serif, 'DM Serif Display', Georgia, serif);
+  font-weight: normal;
+  color: var(--color-ivory, #F4EDE1);
+}
+
+.floating-close-btn {
+  background: rgba(244, 237, 225, 0.1);
+  border: none;
+  color: var(--color-ivory, #F4EDE1);
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: background-color 0.15s ease;
+}
+
+.floating-close-btn:hover {
+  background: rgba(244, 237, 225, 0.25);
+}
+
+.floating-card-body {
+  padding: 14px 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  background: #FCFAF7;
+}
+
+.floating-intro {
+  margin: 0;
+  font-size: 0.78rem;
+  color: #63615A;
+  line-height: 1.4;
+}
+
+.quick-action-btn {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 10px 12px;
+  border-radius: 8px;
+  background: #FFFFFF;
+  border: 1px solid #E8E2D8;
+  text-decoration: none;
+  transition: all 0.2s ease;
+}
+
+.quick-action-btn:hover {
+  border-color: var(--color-copper, #B85F3B);
+  transform: translateX(3px);
+  box-shadow: 0 4px 12px rgba(41, 26, 43, 0.08);
+}
+
+.action-icon-circle {
+  width: 34px;
+  height: 34px;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.whatsapp-bg {
+  background: rgba(37, 211, 102, 0.15);
+  color: #128C7E;
+}
+
+.phone-bg {
+  background: rgba(184, 95, 59, 0.15);
+  color: var(--color-copper, #B85F3B);
+}
+
+.support-bg {
+  background: rgba(41, 26, 43, 0.12);
+  color: var(--color-plum, #291A2B);
+}
+
+.action-text {
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+}
+
+.action-label {
+  font-size: 0.8rem;
+  font-weight: 600;
+  color: var(--color-plum, #291A2B);
+}
+
+.action-sub {
+  font-size: 0.72rem;
+  color: #7A7870;
+  font-family: var(--font-mono, 'JetBrains Mono', monospace);
+}
+
+.floating-footer-location {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 0.7rem;
+  color: #8C887E;
+  padding-top: 6px;
+  border-top: 1px solid #ECE7DE;
+}
+
+@media (max-width: 600px) {
+  .floating-contact-container {
+    bottom: 16px;
+    right: 16px;
+  }
+  .floating-card {
+    width: calc(100vw - 32px);
+  }
+}

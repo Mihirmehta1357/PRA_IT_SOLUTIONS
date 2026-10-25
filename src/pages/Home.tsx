@@ -1,39 +1,129 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { servicesData } from '../data/servicesData';
-import { industriesData } from '../data/industriesData';
+import { siteConfig } from '../config/siteConfig';
 import { projectsData } from '../data/projectsData';
 import { ProcessSteps } from '../components/ui/ProcessSteps';
 import { TechnicalDiagram } from '../components/ui/TechnicalDiagram';
 import { CTASection } from '../components/ui/CTASection';
+import { useScrollReveal } from '../hooks/useScrollReveal';
 import {
-  Code,
+  Camera,
+  Fingerprint,
+  Network,
   Server,
+  Laptop,
   Headphones,
   ArrowRight,
-  ShieldCheck,
   CheckCircle2,
-  Network,
-  Camera,
-  Database,
-  Laptop,
+  Clock,
+  Phone,
+  MessageCircle,
   Truck,
-  Building2,
   Cpu
 } from 'lucide-react';
 import './Home.css';
 
 export const Home: React.FC = () => {
+  // Activate scroll-reveal animations across sections
+  useScrollReveal();
+
+  const hardwareShowcase = [
+    {
+      title: 'CCTV & Video Surveillance Systems',
+      category: 'Physical Security',
+      image: '/images/cctv-surveillance.jpg',
+      alt: 'Commercial outdoor IP bullet camera with metal conduit piping',
+      specs: [
+        '4MP / 4K Ultra-HD Commercial IP Cameras',
+        'NVR Storage Arrays & Remote Live Mobile Viewing',
+        'Loading Dock, Yard & Perimeter Surveillance',
+      ],
+      link: '/services/cctv-access-control',
+      badge: 'High Demand',
+      icon: Camera,
+    },
+    {
+      title: 'Biometric Attendance & Access Control',
+      category: 'Access & Time Tracking',
+      image: '/images/biometric-access.jpg',
+      alt: 'Wall-mounted biometric facial recognition and fingerprint terminal with electromagnetic lock',
+      specs: [
+        'High-Speed Facial Recognition & Optical Fingerprint',
+        'Electromagnetic (EM) Glass & Wooden Door Locks',
+        'Shift Attendance & Automated Payroll Integration',
+      ],
+      link: '/services/cctv-access-control',
+      badge: 'Enterprise Security',
+      icon: Fingerprint,
+    },
+    {
+      title: 'Cat6A Structured Cabling & Switching',
+      category: 'Network Connectivity',
+      image: '/images/network-switch-cabling.jpg',
+      alt: 'Commercial network rack with neatly loomed Cat6A patch cables and 48-port PoE switches',
+      specs: [
+        'Certified Cat6A / Cat6 & Single-Mode Fiber Backbones',
+        '24 / 48-Port Managed PoE+ Enterprise Switches',
+        'High-Bay Directional Warehouse Wireless APs',
+      ],
+      link: '/services/networking',
+      badge: 'Fluke Tested',
+      icon: Network,
+    },
+    {
+      title: 'Server Room Infrastructure & 42U Racks',
+      category: 'Core Compute & Power',
+      image: '/images/hero-server-rack.jpg',
+      alt: 'Organized 42U enterprise server rack with amber status LEDs and horizontal cable managers',
+      specs: [
+        'Standardized 42U / 24U Server Enclosures',
+        'Precision Cable Looming & Rack Thermal Airflow',
+        'Online Double-Conversion Rackmount UPS & PDUs',
+      ],
+      link: '/services/it-infrastructure',
+      badge: 'Zero Clutter',
+      icon: Server,
+    },
+    {
+      title: 'Corporate Hardware & Workstation Fleet',
+      category: 'Workplace Supply',
+      image: '/images/corporate-workstations.jpg',
+      alt: 'Corporate workstations with dual monitors, commercial business laptops and genuine software',
+      specs: [
+        'Tier-1 Commercial Desktops & Business Laptops (Dell/Lenovo)',
+        'Genuine Microsoft 365 Business & Windows Pro Licenses',
+        'Multi-Monitor Workstations & Silent Thin Clients',
+      ],
+      link: '/services/corporate-it',
+      badge: '100% Genuine OEM',
+      icon: Laptop,
+    },
+    {
+      title: 'Managed IT AMC & Emergency Onsite Support',
+      category: 'Continuous Maintenance',
+      image: '/images/operations-center.jpg',
+      alt: 'Operations monitoring center with system status dashboards and technical support desk',
+      specs: [
+        '2-4 Hour Rapid Onsite Dispatch in Uran & Navi Mumbai',
+        'Preventative Monthly Hardware Health Checks',
+        'Comprehensive & Non-Comprehensive AMC Contracts',
+      ],
+      link: '/services/managed-it-support',
+      badge: '2-4 Hr Dispatch',
+      icon: Headphones,
+    },
+  ];
+
   return (
     <div className="home-page">
       {/* 1. ASYMMETRIC EDITORIAL HERO */}
       <section className="hero-section">
         <div className="container hero-container">
-          {/* Left Column: Editorial Headline & Actions */}
+          {/* Left Column: Headline, Punchy Subcopy & Actions */}
           <div className="hero-left">
             <div className="hero-eyebrow">
               <span className="hero-eyebrow-line" />
-              <span>SOFTWARE · INFRASTRUCTURE · IT SERVICES</span>
+              <span>URAN · JNPT · NAVI MUMBAI · MUMBAI MMR</span>
             </div>
 
             <h1 className="hero-title">
@@ -43,29 +133,38 @@ export const Home: React.FC = () => {
             </h1>
 
             <p className="hero-subcopy">
-              Thoughtful software, connected infrastructure and dependable IT services—designed around how your business works.
+              Commercial CCTV surveillance, biometric access control, Cat6A structured cabling, server rack infrastructure &amp; managed IT support AMC—engineered for corporate offices, warehouses, and logistics facilities.
             </p>
 
             <div className="hero-actions">
-              <Link to="/contact" className="btn btn-primary hero-btn-primary">
-                Discuss a project <span className="btn-arrow">→</span>
+              <Link to="/contact" className="btn btn-primary hero-btn-primary" id="hero-discuss-btn">
+                Discuss a Project <span className="btn-arrow">→</span>
               </Link>
-              <Link to="/services" className="btn btn-secondary hero-btn-secondary">
-                Explore our services <span className="btn-arrow">→</span>
-              </Link>
+              <a
+                href={`tel:${siteConfig.contact.phonePrimary}`}
+                className="btn btn-secondary hero-btn-secondary"
+                id="hero-call-btn"
+              >
+                <Phone size={16} /> Direct Desk: {siteConfig.contact.displayPhonePrimary}
+              </a>
             </div>
 
-            {/* Bottom Editorial Annotation Strip */}
-            <div className="hero-annotation-strip">
-              <span className="strip-mark">|</span>
-              <span className="strip-text">IDEAS → SOLUTIONS → LONG-TERM PARTNERSHIP</span>
-              <span className="strip-rule" />
+            {/* Quick Contact & Dispatch Info Bar */}
+            <div className="hero-dispatch-strip">
+              <div className="dispatch-badge-item">
+                <Clock size={15} className="dispatch-icon" />
+                <span><strong>2-4 Hr Onsite Dispatch</strong> in Uran &amp; JNPT</span>
+              </div>
+              <div className="dispatch-badge-sep">·</div>
+              <div className="dispatch-badge-item">
+                <CheckCircle2 size={15} className="dispatch-icon" />
+                <span>GST: <strong>{siteConfig.gstNumber}</strong></span>
+              </div>
             </div>
           </div>
 
-          {/* Right Column: Server Rack Infrastructure Photography with Technical Framing */}
+          {/* Right Column: Server Infrastructure Visual Frame */}
           <div className="hero-right">
-            {/* Technical Reticle / Geometric Linework */}
             <div className="hero-reticle-graphic" aria-hidden="true">
               <svg viewBox="0 0 400 400" className="reticle-svg">
                 <circle cx="200" cy="200" r="160" fill="none" stroke="#B85F3B" strokeWidth="1" strokeDasharray="4 4" opacity="0.45" />
@@ -76,13 +175,12 @@ export const Home: React.FC = () => {
               </svg>
               <div className="reticle-caption">
                 RELIABLE<br />
-                TECHNOLOGY<br />
-                FOR A STRONGER<br />
-                TOMORROW
+                ENGINEERING<br />
+                PROVEN IN<br />
+                THE FIELD
               </div>
             </div>
 
-            {/* Main Visual Photo Container */}
             <div className="hero-image-frame">
               <img
                 src="/images/hero-server-rack.jpg"
@@ -91,169 +189,185 @@ export const Home: React.FC = () => {
                 loading="eager"
               />
 
-              {/* Dark Angular Olive Charcoal Framing Polygon */}
               <div className="hero-image-overlay-panel">
                 <div className="overlay-meta-top">
-                  PEOPLE<br />
-                  TECHNOLOGY<br />
-                  BUSINESS<br />
-                  TOGETHER
+                  SURVEILLANCE<br />
+                  BIOMETRICS<br />
+                  NETWORKS<br />
+                  SERVERS
                 </div>
                 <div className="overlay-counter">
-                  01 <span>/</span> 03
+                  01 <span>/</span> 06
                 </div>
                 <div className="overlay-meta-bottom">
                   <div className="meta-copper-line" />
                   SCALABLE<br />
-                  SECURE<br />
-                  FUTURE-READY
+                  COMPLIANT<br />
+                  ZERO-DOWNTIME
                 </div>
               </div>
             </div>
           </div>
         </div>
 
-        {/* 2. THREE-COLUMN CAPABILITY PILLARS (directly beneath hero) */}
+        {/* 2. CORE CAPABILITY PILLARS STRIP */}
         <div className="hero-pillars-bar">
           <div className="container pillars-container">
-            {/* Column 01: Software & Digital Products */}
-            <div className="pillar-column">
+            <div className="pillar-column reveal-on-scroll reveal-stagger-1">
               <div className="pillar-header">
                 <span className="pillar-num">01 —</span>
                 <div className="pillar-icon-box">
-                  <Code size={18} />
+                  <Camera size={18} />
                 </div>
               </div>
-              <h2 className="pillar-title">Software &amp; Digital Products</h2>
+              <h2 className="pillar-title">CCTV &amp; Physical Security</h2>
               <p className="pillar-desc">
-                Custom websites, web applications, mobile apps and business solutions to streamline your business and create new opportunities.
+                High-definition IP surveillance, biometric shift attendance terminals, and electromagnetic door locks for facilities and offices.
               </p>
-              <Link to="/services/software-development" className="pillar-link">
-                Explore software solutions <ArrowRight size={14} />
+              <Link to="/services/cctv-access-control" className="pillar-link">
+                Explore CCTV &amp; Biometrics <ArrowRight size={14} />
               </Link>
             </div>
 
-            {/* Column 02: Networks & Infrastructure */}
-            <div className="pillar-column">
+            <div className="pillar-column reveal-on-scroll reveal-stagger-2">
               <div className="pillar-header">
                 <span className="pillar-num">02 —</span>
                 <div className="pillar-icon-box">
-                  <Server size={18} />
+                  <Network size={18} />
                 </div>
               </div>
               <h2 className="pillar-title">Networks &amp; Infrastructure</h2>
               <p className="pillar-desc">
-                Design, implement and manage secure, scalable IT infrastructure, networks, cloud environments and business systems.
+                Certified Cat6A structured cabling, single-mode fiber, managed PoE switches, and 42U server rack management.
               </p>
               <Link to="/services/networking" className="pillar-link">
-                Explore infrastructure solutions <ArrowRight size={14} />
+                Explore Infrastructure <ArrowRight size={14} />
               </Link>
             </div>
 
-            {/* Column 03: Managed IT & Support */}
-            <div className="pillar-column">
+            <div className="pillar-column reveal-on-scroll reveal-stagger-3">
               <div className="pillar-header">
                 <span className="pillar-num">03 —</span>
                 <div className="pillar-icon-box">
                   <Headphones size={18} />
                 </div>
               </div>
-              <h2 className="pillar-title">Managed IT &amp; Support</h2>
+              <h2 className="pillar-title">Managed IT Support &amp; AMC</h2>
               <p className="pillar-desc">
-                Ongoing IT support, system monitoring, security, backup and maintenance to keep your business running smoothly.
+                Routine preventative maintenance, fast 2-4 hr onsite dispatch across Uran &amp; Navi Mumbai, and corporate hardware supply.
               </p>
               <Link to="/services/managed-it-support" className="pillar-link">
-                Explore IT services <ArrowRight size={14} />
+                Explore Support &amp; AMC <ArrowRight size={14} />
               </Link>
             </div>
           </div>
         </div>
       </section>
 
-      {/* 3. CAPABILITIES STRIP (Clean & Verifiable, No Fake Metrics) */}
+      {/* 3. VERIFIED STANDARDS STRIP */}
       <section className="capabilities-strip-section">
         <div className="container">
           <div className="capabilities-strip-grid">
-            <div className="capability-strip-item">
+            <div className="capability-strip-item reveal-on-scroll reveal-stagger-1">
               <div className="cap-icon-wrap"><CheckCircle2 size={16} /></div>
               <div>
-                <strong>Structured Physical Standards</strong>
-                <span>Certified Cat6A, single-mode fiber, &amp; clean rack layouts</span>
+                <strong>Fluke Wiremap Tested</strong>
+                <span>100% Certified Cat6A &amp; single-mode optical fiber</span>
               </div>
             </div>
-            <div className="capability-strip-item">
-              <div className="cap-icon-wrap"><ShieldCheck size={16} /></div>
+            <div className="capability-strip-item reveal-on-scroll reveal-stagger-2">
+              <div className="cap-icon-wrap"><Clock size={16} /></div>
               <div>
-                <strong>Air-Gapped &amp; 3-2-1 Backups</strong>
-                <span>Ransomware-resilient snapshots and verified restore drills</span>
+                <strong>2-4 Hr Rapid Dispatch</strong>
+                <span>Direct response for Uran, JNPT, Panvel &amp; Navi Mumbai</span>
               </div>
             </div>
-            <div className="capability-strip-item">
+            <div className="capability-strip-item reveal-on-scroll reveal-stagger-3">
               <div className="cap-icon-wrap"><Cpu size={16} /></div>
               <div>
-                <strong>Genuine Commercial Licensing</strong>
-                <span>Authentic Microsoft 365, Windows Pro, &amp; enterprise security</span>
+                <strong>100% Genuine OEM Hardware</strong>
+                <span>Authorized Dell, Lenovo, HP, Hikvision, CP Plus &amp; Synology</span>
               </div>
             </div>
-            <div className="capability-strip-item">
+            <div className="capability-strip-item reveal-on-scroll reveal-stagger-4">
               <div className="cap-icon-wrap"><Truck size={16} /></div>
               <div>
-                <strong>Operational Facility Aware</strong>
-                <span>Specialized for warehouses, fleet depots, and multi-branch sites</span>
+                <strong>Logistics &amp; Port Ready</strong>
+                <span>Specialized for CFS yards, high-bay warehouses &amp; depots</span>
               </div>
             </div>
           </div>
         </div>
       </section>
 
-      {/* 4. FEATURED SERVICE CATEGORIES DIRECTORY */}
-      <section className="section-pad services-featured-section">
+      {/* 4. VISUAL HARDWARE & SOLUTIONS SHOWCASE (Inspired by ARP Services, elevated to Enterprise) */}
+      <section className="section-pad showcase-section" id="hardware-solutions">
         <div className="container">
-          <div className="section-header-row">
+          <div className="section-header-row reveal-on-scroll">
             <div>
-              <div className="eyebrow">PORTFOLIO OVERVIEW</div>
+              <div className="eyebrow">CORE HARDWARE &amp; DEPLOYMENT CAPABILITIES</div>
               <h2 className="section-title">
-                Comprehensive IT services, <span className="title-copper">disciplined execution.</span>
+                Hardware-led infrastructure, <span className="title-copper">precision installed.</span>
               </h2>
               <p className="section-subcopy">
-                From physical structured cabling in a new facility to multi-site managed helpdesk support, explore our verified service capabilities.
+                Browse our core physical deployment categories. Every system is scoped with exact OEM model numbers, installed with metallic conduit piping, and certified before handover.
               </p>
             </div>
             <Link to="/services" className="btn btn-secondary header-row-cta">
-              All 8 Service Disciplines <ArrowRight size={14} />
+              All 7 Service Disciplines <ArrowRight size={14} />
             </Link>
           </div>
 
-          <div className="services-grid">
-            {servicesData.slice(0, 6).map((service) => {
-              const IconComp =
-                service.icon === 'Server' ? Server :
-                service.icon === 'Network' ? Network :
-                service.icon === 'ShieldCheck' ? ShieldCheck :
-                service.icon === 'Camera' ? Camera :
-                service.icon === 'Database' ? Database :
-                service.icon === 'Headphones' ? Headphones :
-                service.icon === 'Laptop' ? Laptop : Code;
-
+          <div className="showcase-grid">
+            {hardwareShowcase.map((item, index) => {
+              const IconComp = item.icon;
               return (
-                <div key={service.slug} className="service-card-item">
-                  <div className="service-card-top">
-                    <span className="service-cat-pill">{service.categoryLabel}</span>
-                    <div className="service-icon-box">
-                      <IconComp size={20} />
-                    </div>
+                <div
+                  key={index}
+                  className={`showcase-card sheen-card reveal-on-scroll reveal-stagger-${(index % 3) + 1}`}
+                >
+                  <div className="showcase-card-image-wrap">
+                    <img
+                      src={item.image}
+                      alt={item.alt}
+                      className="showcase-card-img"
+                      loading="lazy"
+                    />
+                    <span className="showcase-card-badge">{item.badge}</span>
+                    <span className="showcase-card-cat">{item.category}</span>
                   </div>
-                  <h3 className="service-card-title">{service.title}</h3>
-                  <p className="service-card-desc">{service.subtitle}</p>
-                  <ul className="service-features-list">
-                    {service.summaryPoints.slice(0, 2).map((pt, i) => (
-                      <li key={i}>{pt}</li>
-                    ))}
-                  </ul>
-                  <div className="service-card-footer">
-                    <Link to={`/services/${service.slug}`} className="service-explore-link">
-                      Detailed Scope &amp; Specifications <ArrowRight size={14} />
-                    </Link>
+
+                  <div className="showcase-card-body">
+                    <div className="showcase-card-header">
+                      <div className="showcase-icon-box">
+                        <IconComp size={18} />
+                      </div>
+                      <h3 className="showcase-card-title">{item.title}</h3>
+                    </div>
+
+                    <ul className="showcase-specs-list">
+                      {item.specs.map((spec, sIdx) => (
+                        <li key={sIdx}>
+                          <CheckCircle2 size={13} className="spec-check-icon" />
+                          <span>{spec}</span>
+                        </li>
+                      ))}
+                    </ul>
+
+                    <div className="showcase-card-actions">
+                      <Link to={item.link} className="showcase-detail-btn">
+                        <span>View Specifications</span> <ArrowRight size={14} />
+                      </Link>
+                      <a
+                        href={siteConfig.contact.whatsappUrl}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="showcase-whatsapp-btn"
+                        title="Inquire on WhatsApp"
+                      >
+                        <MessageCircle size={15} />
+                      </a>
+                    </div>
                   </div>
                 </div>
               );
@@ -262,18 +376,18 @@ export const Home: React.FC = () => {
         </div>
       </section>
 
-      {/* 5. DEDICATED LOGISTICS & INDUSTRIAL IT FEATURE SECTION */}
+      {/* 5. LOGISTICS & INDUSTRIAL IT FEATURE SECTION */}
       <section className="logistics-feature-section">
         <div className="container">
           <div className="logistics-feature-grid">
             {/* Left Content */}
-            <div className="logistics-feature-content">
-              <div className="eyebrow eyebrow-dark">STRATEGIC DIFFERENTIATION</div>
+            <div className="logistics-feature-content reveal-on-scroll">
+              <div className="eyebrow eyebrow-dark">STRATEGIC CORRIDOR EXPERTISE</div>
               <h2 className="logistics-feature-title">
-                IT that keeps operations <span className="copper-italic">connected.</span>
+                IT infrastructure for ports, CFS &amp; <span className="copper-italic">high-bay warehouses.</span>
               </h2>
               <p className="logistics-feature-lead">
-                From high-rack warehouse connectivity and vehicle gate surveillance to multi-branch networks and operational software, build the technology foundation your locations depend on.
+                Operating directly in the Uran &amp; JNPT corridor, we understand the operational reality of metallic container stacks, electrical noise, dust, and continuous 24/7 trucking movements.
               </p>
 
               <div className="logistics-points-list">
@@ -282,7 +396,7 @@ export const Home: React.FC = () => {
                   <div>
                     <h4 className="point-heading">High-Bay Directional Industrial Wi-Fi</h4>
                     <p className="point-desc">
-                      Eliminate dead zones caused by metallic storage racking. Directional aisle antennas keep forklift terminals and handheld barcode scanners connected without roaming drops.
+                      Aisle-focused directional antennas eliminate metallic signal reflection, keeping barcode handhelds and forklift tablets connected without drops.
                     </p>
                   </div>
                 </div>
@@ -290,9 +404,9 @@ export const Home: React.FC = () => {
                 <div className="logistics-point-item">
                   <div className="point-number">02</div>
                   <div>
-                    <h4 className="point-heading">Gate &amp; Loading Bay Surveillance</h4>
+                    <h4 className="point-heading">Gate &amp; Weighbridge Video Surveillance</h4>
                     <p className="point-desc">
-                      High-definition IP cameras with license-plate capture and Wide Dynamic Range (WDR) provide timestamped proof to resolve cargo disputes and secure perimeters.
+                      License plate recognition (ANPR) and high-speed boom barrier integration for container freight stations and dispatch checkposts.
                     </p>
                   </div>
                 </div>
@@ -302,21 +416,21 @@ export const Home: React.FC = () => {
                   <div>
                     <h4 className="point-heading">Branch-to-HQ Secure VPN Interconnect</h4>
                     <p className="point-desc">
-                      Automated failover IPsec tunnels keeping remote weighbridges, regional depots, and central ERP databases synchronized with sub-second failover.
+                      Sub-second automated failover tunnels keeping remote weighbridges, regional depots, and central ERP databases continuously synchronized.
                     </p>
                   </div>
                 </div>
               </div>
 
               <div className="logistics-actions">
-                <Link to="/industries/logistics-industrial-it" className="btn btn-primary">
+                <Link to="/industries/logistics-industrial-it" className="btn btn-primary" id="logistics-explore-btn">
                   Explore Logistics &amp; Industrial Solutions <ArrowRight size={16} />
                 </Link>
               </div>
             </div>
 
             {/* Right Visual Image */}
-            <div className="logistics-feature-visual">
+            <div className="logistics-feature-visual reveal-on-scroll">
               <div className="logistics-image-frame">
                 <img
                   src="/images/warehouse-logistics-it.jpg"
@@ -337,30 +451,33 @@ export const Home: React.FC = () => {
         </div>
       </section>
 
-      {/* 6. SELECTED SOLUTION SCENARIOS (Illustrative Case Studies) */}
+      {/* 6. SOLUTION SCENARIOS (Practical Illustrative Case Studies) */}
       <section className="section-pad scenarios-section">
         <div className="container">
-          <div className="section-header-row">
+          <div className="section-header-row reveal-on-scroll">
             <div>
-              <div className="eyebrow">PRACTICAL PROBLEM SOLVING</div>
+              <div className="eyebrow">PROVEN BLUEPRINTS</div>
               <h2 className="section-title">
                 Illustrative solution <span className="title-copper">scenarios.</span>
               </h2>
               <p className="section-subcopy">
-                Real operational challenges analyzed and resolved through disciplined engineering. Clearly labeled capability demonstrations.
+                Detailed architectural case studies showing exact Bill of Materials, network topologies, and operational outcomes.
               </p>
             </div>
             <Link to="/projects" className="btn btn-secondary header-row-cta">
-              View All 5 Scenarios <ArrowRight size={14} />
+              View All Scenarios <ArrowRight size={14} />
             </Link>
           </div>
 
           <div className="scenarios-grid">
-            {projectsData.slice(0, 3).map((item) => (
-              <div key={item.id} className="scenario-card">
+            {projectsData.slice(0, 3).map((item, index) => (
+              <div
+                key={item.id}
+                className={`scenario-card sheen-card reveal-on-scroll reveal-stagger-${index + 1}`}
+              >
                 <div className="scenario-image-wrap">
                   <img src={item.image} alt={item.title} className="scenario-img" loading="lazy" />
-                  <span className="scenario-badge">Illustrative Scenario</span>
+                  <span className="scenario-badge">Architecture Blueprint</span>
                 </div>
                 <div className="scenario-body">
                   <span className="scenario-category">{item.categoryLabel}</span>
@@ -386,10 +503,10 @@ export const Home: React.FC = () => {
         </div>
       </section>
 
-      {/* 7. HOW WE WORK (01-04 Process Sequence) */}
+      {/* 7. HOW WE WORK (01-04 Methodology) */}
       <section className="section-pad process-section">
         <div className="container">
-          <div className="process-header">
+          <div className="process-header reveal-on-scroll">
             <div className="eyebrow">THE PRA METHODOLOGY</div>
             <h2 className="section-title">
               Clear stages, <span className="title-copper">zero ambiguity.</span>
@@ -403,87 +520,38 @@ export const Home: React.FC = () => {
         </div>
       </section>
 
-      {/* 8. INDUSTRIES WE SUPPORT */}
-      <section className="section-pad industries-overview-section">
+      {/* 8. FAST CONSULTATION & LOCAL DISPATCH BANNER */}
+      <section className="local-dispatch-callout reveal-on-scroll">
         <div className="container">
-          <div className="section-header-row">
-            <div>
-              <div className="eyebrow">SECTORS &amp; FACILITIES</div>
-              <h2 className="section-title">
-                Engineered for operationally <span className="title-copper">intensive environments.</span>
-              </h2>
-              <p className="section-subcopy">
-                Whether you manage a transport fleet yard, a multi-story corporate HQ, or a medical clinic, our IT infrastructure matches your uptime demands.
+          <div className="dispatch-callout-card">
+            <div className="callout-content">
+              <span className="callout-pill">URAN &amp; NAVI MUMBAI ENGINEERING DESK</span>
+              <h3 className="callout-title">Need an infrastructure audit or fast hardware quote?</h3>
+              <p className="callout-desc">
+                Visit our office at Kalpana Niwas, Shop 1, Kotnaka, Uran, or connect directly with our technical team for a site visit within 24 hours.
               </p>
             </div>
-            <Link to="/industries" className="btn btn-secondary header-row-cta">
-              All Industry Profiles <ArrowRight size={14} />
-            </Link>
-          </div>
-
-          <div className="industries-grid">
-            {industriesData.slice(0, 4).map((ind) => {
-              const IconComp =
-                ind.icon === 'Truck' ? Truck :
-                ind.icon === 'Boxes' ? Building2 :
-                ind.icon === 'Factory' ? Server : Building2;
-
-              return (
-                <div key={ind.id} className="industry-overview-card">
-                  <div className="ind-card-icon"><IconComp size={22} /></div>
-                  <h3 className="ind-card-title">{ind.title}</h3>
-                  <p className="ind-card-tagline">{ind.tagline}</p>
-                  <p className="ind-card-desc">{ind.overview.slice(0, 140)}...</p>
-                  <Link to="/industries" className="ind-card-link">
-                    Explore Industry IT Needs <ArrowRight size={13} />
-                  </Link>
-                </div>
-              );
-            })}
-          </div>
-        </div>
-      </section>
-
-      {/* 9. WHY PRA IT SOLUTIONS */}
-      <section className="why-pra-section">
-        <div className="container">
-          <div className="why-pra-panel">
-            <div className="why-pra-content">
-              <div className="eyebrow eyebrow-dark">OUR OPERATING PRINCIPLE</div>
-              <h2 className="why-pra-title">
-                Technology should reduce friction, <span className="copper-italic">not introduce it.</span>
-              </h2>
-              <p className="why-pra-lead">
-                Too many businesses struggle with unmanaged network cables, pirated software liabilities, slow support desks, and vendor finger-pointing. PRA operates as a disciplined, single-point engineering partner.
-              </p>
-
-              <div className="why-pra-pillars-grid">
-                <div className="why-pillar">
-                  <h4>Disciplined Craftsmanship</h4>
-                  <p>Every cable run is labeled at both ends, wiremap-tested, and neatly loomed. No messy server room surprises.</p>
-                </div>
-                <div className="why-pillar">
-                  <h4>Genuine Compliance</h4>
-                  <p>100% genuine commercial licensing and authentic enterprise hardware warranties, protecting your business from legal liabilities.</p>
-                </div>
-                <div className="why-pillar">
-                  <h4>Transparent Scoping</h4>
-                  <p>Clear, itemized Bill of Materials with exact model numbers and realistic SLAs. No hidden fees or inflated markups.</p>
-                </div>
-                <div className="why-pillar">
-                  <h4>Facility-Aware Engineering</h4>
-                  <p>We understand warehouse temperatures, industrial electrical noise, and loading bay camera angles.</p>
-                </div>
-              </div>
+            <div className="callout-actions">
+              <a href={`tel:${siteConfig.contact.phonePrimary}`} className="btn btn-primary">
+                <Phone size={16} /> Call {siteConfig.contact.displayPhonePrimary}
+              </a>
+              <a
+                href={siteConfig.contact.whatsappUrl}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="btn btn-secondary callout-whatsapp"
+              >
+                <MessageCircle size={16} /> Quick WhatsApp
+              </a>
             </div>
           </div>
         </div>
       </section>
 
-      {/* 10. FINAL CONVERSION CTA */}
+      {/* 9. FINAL CONVERSION CTA */}
       <CTASection
         title="Let's build the right technology foundation."
-        subtitle="Share your requirement—whether an infrastructure site audit, high-bay warehouse Wi-Fi, or structured annual IT support—and we will prepare a clear technical proposal."
+        subtitle="Share your requirement—whether CCTV surveillance, biometric door locks, structured cabling, or annual AMC upkeep—and we will prepare a clear technical proposal."
         primaryCtaText="Discuss a Project"
         primaryCtaLink="/contact"
       />

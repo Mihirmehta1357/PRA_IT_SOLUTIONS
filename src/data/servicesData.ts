@@ -37,135 +37,135 @@ export interface ServiceItem {
 
 export const servicesData: ServiceItem[] = [
   {
-    slug: "it-infrastructure",
-    title: "IT Infrastructure Management",
-    subtitle: "End-to-End Infrastructure Lifecycle, Capacity Planning & Reliability",
-    category: "infrastructure",
-    categoryLabel: "Core Infrastructure",
-    tagline: "Building the silent, dependable backbone that powers everyday business operations.",
-    icon: "Server",
-    heroImage: "/images/hero-server-rack.jpg",
+    slug: "cctv-access-control",
+    title: "CCTV, Surveillance & Access Control",
+    subtitle: "Commercial 4MP/4K IP Video, Loading Dock Cameras, Facial & Biometric Attendance",
+    category: "security",
+    categoryLabel: "Physical Systems",
+    tagline: "Total site visibility, perimeter security, and verifiable personnel entry for offices, gates, and warehouses.",
+    icon: "Camera",
+    heroImage: "/images/cctv-surveillance.jpg",
     overview:
-      "Enterprise operations depend on reliable hardware, disciplined cable management, clean power distribution, and vigilant system administration. PRA IT Solutions plans, deploys, and maintains physical and virtual infrastructure for multi-workstation offices, warehouse distribution hubs, and industrial branches.",
+      "Physical security is the primary operational safeguard for warehouses, CFS yards, factories, and corporate offices across Uran, Navi Mumbai, and Mumbai MMR. PRA designs and installs commercial-grade IP CCTV systems, Network Video Recorders (NVR) with surveillance-rated storage, outdoor perimeter cameras, and biometric attendance systems that provide clear visual evidence and verifiable employee access logs.",
     summaryPoints: [
-      "Objective assessment of existing racks, servers, storage, and networking hardware",
-      "Disciplined cable routing, server racking, labeling, and thermal management",
-      "Preventive maintenance schedules reducing unexpected equipment downtime",
-      "Clear asset registers and vendor coordination for warranty and lifecycle upgrades",
+      "High-resolution 4MP/4K IP surveillance cameras with infrared night vision and Wide Dynamic Range (WDR)",
+      "Specialized perimeter, loading dock, vehicle gate, and warehouse tall-aisle camera placement",
+      "Network Video Recorder (NVR) sizing providing 30+ days continuous retention on surveillance-grade hard drives",
+      "Biometric fingerprint, contactless facial recognition, and RFID access-control turnstiles and electromagnetic door locks",
     ],
     scope: [
       {
-        heading: "Infrastructure Assessment & Audits",
-        description: "Baseline audit of physical racks, power delivery, heat load, cable health, and switch capacities.",
+        heading: "Commercial IP CCTV Surveillance Architecture",
+        description: "End-to-end IP video systems engineered for high fidelity, low light, and reliable recording.",
         items: [
-          "Rack space utilization and cable pathway inspection",
-          "Power backup (UPS) load calculations and battery health check",
-          "Thermal load analysis and ventilation verification",
-          "Complete hardware inventory and configuration mapping",
+          "Fixed dome cameras for office interiors, corridors, reception, and billing counters",
+          "Weatherproof IP67 bullet and turret cameras for outdoor parking, perimeter walls, and dispatch bays",
+          "PTZ (Pan-Tilt-Zoom) cameras for active yard monitoring and vehicle movement tracking",
+          "Wide Dynamic Range (WDR) sensors preventing washed-out images at sunny warehouse shutter entrances",
         ],
       },
       {
-        heading: "Server Room & Rack Engineering",
-        description: "Professional rack installations designed for ease of maintenance, cooling, and clear identification.",
+        heading: "NVR Storage & Remote Monitoring Setup",
+        description: "Reliable storage calculations ensuring recordings are preserved for required compliance windows.",
         items: [
-          "Standard 19-inch 24U/42U server rack assembly and grounding",
-          "Patch panel termination, port color-coding, and durable labeling",
-          "Cable tray management eliminating wire bird's nests",
-          "UPS redundancy configuration and safe automated shutdown scripting",
+          "Enterprise surveillance-grade hard drives (WD Purple / Seagate SkyHawk) engineered for 24/7 write duty",
+          "H.265+ smart video compression maximizing storage efficiency without degrading critical details",
+          "Isolated CCTV VLAN preventing security cameras from saturating primary office internet",
+          "Secure remote viewing on authorized manager laptops and mobile devices via encrypted streams",
         ],
       },
       {
-        heading: "Preventive Maintenance & Lifecycle Management",
-        description: "Scheduled health checks to catch degrading power supplies, failing disks, and dust accumulation.",
+        heading: "Biometric Attendance & Access Control",
+        description: "Regulating entry to server rooms, corporate offices, and warehouse floors with automated logging.",
         items: [
-          "Biannual internal physical cleaning and filter replacement",
-          "Firmware updates on enterprise switches, SANs, and server boards",
-          "Hardware health monitoring (fan RPM, PSU voltages, disk S.M.A.R.T.)",
-          "Hardware upgrade path planning before reaching end-of-service-life",
+          "High-speed optical fingerprint and contactless facial recognition terminals",
+          "Electromagnetic (EM) door locks, drop bolts, and emergency exit push-bars with power backup",
+          "Role-based time-slot access (e.g. cleaning crew permitted only during authorized hours)",
+          "Centralized attendance management software integration with payroll CSV exports",
         ],
       },
       {
-        heading: "Multi-Location Branch Infrastructure Support",
-        description: "Uniform infrastructure standards across head offices, remote warehouses, and dispatch hubs.",
+        heading: "Loading Dock & Gate Operations Coverage",
+        description: "Specialized optical placement designed for transport hubs, fleet yards, and distribution centers.",
         items: [
-          "Standardized branch IT rack schematics and hardware Bill-of-Materials",
-          "Remote out-of-band management setup for remote site troubleshooting",
-          "Vendor coordination for third-party warranty dispatch",
-          "Periodic multi-site status and capacity utilization reports",
+          "High-angle overview cameras monitoring loading and unloading bays to resolve cargo dispute claims",
+          "Entry gate cameras angled for clear vehicle number plate and driver facial capture",
+          "Strobe and two-way audio integration for remote perimeter warning deterrence",
+          "UPS battery backup keeping surveillance online during grid power transitions",
         ],
       },
     ],
     process: [
       {
         step: "01",
-        title: "Audit & Site Survey",
-        description: "We document existing equipment, physical space, electrical supplies, cooling, and pain points.",
+        title: "Site Walkthrough & Blindspot Analysis",
+        description: "We evaluate lighting conditions, entrance points, yard perimeters, and cabling distances across your Uran / Navi Mumbai facility.",
       },
       {
         step: "02",
-        title: "Topology & Rack Design",
-        description: "Clear architectural schematics showing rack layout, cable pathways, and power distribution.",
+        title: "Camera Field-of-View Mapping",
+        description: "Selection of focal lengths (2.8mm wide vs 6mm narrow) ensuring proper identification range.",
       },
       {
         step: "03",
-        title: "Structured Execution",
-        description: "Clean racking, labeling, structured cabling, configuration, and end-to-end testing.",
+        title: "Conduit, Cabling & Mounting",
+        description: "Outdoor UV-resistant Cat6 cabling in PVC/metal conduits with surge protection at building entries.",
       },
       {
         step: "04",
-        title: "Handover & Lifecycle Support",
-        description: "Comprehensive asset documentation, network diagram delivery, and ongoing preventive maintenance.",
+        title: "NVR Tuning & Staff Training",
+        description: "Motion detection zones, recording schedule setup, retention verification, and app training.",
       },
     ],
     technicalHighlights: [
       {
-        title: "Cable Organization",
-        detail: "Zero messy tangles: bundle-tied, velcro-fastened, and numbered at both patch panel and drop.",
+        title: "Dedicated CCTV VLAN",
+        detail: "Camera streams never contend with employee internet traffic or video calls.",
       },
       {
-        title: "Thermal Efficiency",
-        detail: "Separation of cold intake and hot exhaust aisles to maximize equipment lifespan.",
+        title: "Surveillance Drive Duty",
+        detail: "We use only surveillance-rated drives rated for continuous 24/7 video writes, avoiding desktop drive failures.",
       },
       {
-        title: "Power Redundancy",
-        detail: "Dual-circuit routing where supported, with automated UPS load shedding for critical servers.",
+        title: "Smart Search",
+        detail: "Find specific incidents quickly using motion-region filtering rather than scrubbing days of footage.",
       },
     ],
     engagementModels: [
       {
-        title: "Installation & Modernization Project",
-        description: "One-time complete overhaul, server room re-racking, cabling cleanup, and asset documentation.",
-        bestFor: "Relocations, office buildouts, or remediation of messy legacy server rooms.",
+        title: "Turnkey CCTV & Access Installation",
+        description: "Complete equipment supply, cabling, mounting, NVR configuration, and commissioning.",
+        bestFor: "New premises, facility expansions, or replacing degraded analog camera setups.",
       },
       {
-        title: "Comprehensive Annual Maintenance Contract (AMC)",
-        description: "Scheduled preventive maintenance, emergency incident response, and component servicing.",
-        bestFor: "Established operations needing predictable operational upkeep without full-time staff.",
+        title: "CCTV System AMC & Maintenance",
+        description: "Quarterly camera lens cleaning, angle adjustments, NVR HDD health checks, and quick repairs.",
+        bestFor: "Enterprises with extensive camera counts that cannot afford undetected recording failures.",
       },
       {
-        title: "Fully Managed Infrastructure",
-        description: "Continuous health tracking, proactive patching, lifecycle management, and regular executive reports.",
-        bestFor: "Mid-sized businesses and multi-site distribution operators.",
+        title: "Biometric & Door Access Upgrades",
+        description: "Retrofitting modern facial-recognition or card locks onto existing corporate glass or wooden doors.",
+        bestFor: "Offices seeking modern contactless entry and automated attendance tracking.",
       },
     ],
     faqs: [
       {
-        question: "What is the difference between an installation project and an ongoing AMC?",
+        question: "What is the practical difference between analog HD cameras and IP network cameras?",
         answer:
-          "An installation project delivers a turnkey, documented, tested physical setup. An AMC provides ongoing operational assurance: periodic physical servicing, firmware patching, emergency troubleshooting, and warranty coordination.",
+          "IP cameras digitize video onboard and transmit high-bandwidth digital data over standard Cat6 ethernet, offering sharper detail, digital zoom without extreme pixelation, simpler cabling via PoE (Power over Ethernet), and superior encryption.",
       },
       {
-        question: "Can PRA re-organize an existing 'spaghetti' server rack without shutting down business operations?",
+        question: "How many days of video recordings can our NVR store?",
         answer:
-          "Yes. We schedule cabling overhauls during planned maintenance windows (weekends or overnight) with pre-labeled jumpers and phased reconnections to minimize operational downtime.",
+          "Storage duration depends on camera resolution, bitrate, frame rate, motion triggers, and hard drive capacity. We calculate the exact hard drive terabytes needed to guarantee your required retention window (e.g. 15, 30, or 60 days).",
       },
       {
-        question: "Do you supply the server racks and accessories, or can we procure them directly?",
+        question: "Can biometric attendance systems link to our payroll software?",
         answer:
-          "Both options are supported. We can supply enterprise-grade racks, PDUs, and cable trays, or work with your existing procurement channels based on detailed technical specifications we provide.",
+          "Yes. Our attendance management software can generate standard shift reports, overtime records, and export CSV/Excel files compatible with standard Indian payroll and ERP systems.",
       },
     ],
-    ctaText: "Discuss Your Infrastructure",
+    ctaText: "Request a CCTV & Biometric Site Survey",
   },
   {
     slug: "networking",
@@ -293,272 +293,141 @@ export const servicesData: ServiceItem[] = [
       {
         question: "Can PRA help configure redundant internet connections from two different ISPs?",
         answer:
-          "Yes. We configure multi-WAN edge routers and firewalls with policy-based routing, health-check monitors, and automatic failover to keep critical systems online.",
+          "Yes. We configure multi-WAN edge routers with policy-based routing, health-check monitors, and automatic failover to keep critical systems online.",
       },
     ],
     ctaText: "Discuss Your Network Requirements",
   },
   {
-    slug: "security",
-    title: "Cybersecurity & Data Protection",
-    subtitle: "Next-Gen Firewalls, Endpoint Defense, Email Filtering & Pragmatic Security Posture",
-    category: "security",
-    categoryLabel: "Defense & Integrity",
-    tagline: "Practical, multi-layered security controls protecting business assets against ransomware, phishing, and data loss.",
-    icon: "ShieldCheck",
-    heroImage: "/images/operations-center.jpg",
+    slug: "it-infrastructure",
+    title: "IT Infrastructure Management",
+    subtitle: "End-to-End Infrastructure Lifecycle, Capacity Planning & Facility Management",
+    category: "infrastructure",
+    categoryLabel: "Core Infrastructure",
+    tagline: "Building the silent, dependable backbone that powers everyday business operations.",
+    icon: "Server",
+    heroImage: "/images/hero-server-rack.jpg",
     overview:
-      "Modern cyber threats rarely arrive via dramatic movie-style intrusions—they infiltrate via deceptive email attachments, unpatched desktop software, and open remote desktop ports. PRA implements disciplined, defense-in-depth security architectures suited to growing corporate and operational environments.",
+      "Enterprise operations depend on reliable hardware, disciplined cable management, clean power distribution, and vigilant system administration. PRA IT Solutions plans, deploys, and maintains physical and virtual infrastructure for multi-workstation offices, warehouse distribution hubs, and industrial branches in Uran, Navi Mumbai, and surrounding industrial belts.",
     summaryPoints: [
-      "Hardware firewall deployment with stateful inspection, intrusion prevention (IPS), and GeoIP blocking",
-      "Centrally managed endpoint detection and antivirus for corporate desktops, laptops, and servers",
-      "Corporate email security featuring SPF, DKIM, DMARC validation, and anti-phishing protection",
-      "Disciplined patch management and vulnerability surface reduction without disrupting work",
+      "Objective assessment of existing racks, servers, storage, and networking hardware",
+      "Disciplined cable routing, server racking, labeling, and thermal management",
+      "Preventive maintenance schedules reducing unexpected equipment downtime",
+      "Clear asset registers and vendor coordination for warranty and lifecycle upgrades",
     ],
     scope: [
       {
-        heading: "Next-Generation Firewall (NGFW) Deployment",
-        description: "Securing network perimeters with granular application control and content filtering.",
+        heading: "Infrastructure Assessment & Audits",
+        description: "Baseline audit of physical racks, power delivery, heat load, cable health, and switch capacities.",
         items: [
-          "Perimeter firewall deployment (Fortinet, Sophos, pfSense, or enterprise preferred)",
-          "Deep packet inspection and automated Intrusion Prevention Systems (IPS)",
-          "Restricted outbound egress filtering preventing compromised machines from beaconing C2 servers",
-          "Granular web filtering preventing access to high-risk malware domains and illicit content",
+          "Rack space utilization and cable pathway inspection",
+          "Power backup (UPS) load calculations and battery health check",
+          "Thermal load analysis and ventilation verification",
+          "Complete hardware inventory and configuration mapping",
         ],
       },
       {
-        heading: "Centrally Managed Endpoint Security",
-        description: "Shielding laptops, desktops, and file servers against malware, ransomware, and unauthorized devices.",
+        heading: "Server Room & Rack Engineering",
+        description: "Professional rack installations designed for ease of maintenance, cooling, and clear identification.",
         items: [
-          "Centralized cloud/on-prem dashboard monitoring endpoint health across all employees",
-          "Behavioral ransomware shielding that terminates unauthorized encryption attempts",
-          "USB port storage restriction preventing unauthorized flash drive data extraction",
-          "Automated signature and heuristic engine updates with minimal system overhead",
+          "Standard 19-inch 24U/42U server rack assembly and grounding",
+          "Patch panel termination, port color-coding, and durable labeling",
+          "Cable tray management eliminating wire bird's nests",
+          "UPS redundancy configuration and safe automated shutdown scripting",
         ],
       },
       {
-        heading: "Email Security & Anti-Phishing Safeguards",
-        description: "Hardening business email domains against spoofing, impersonation, and malicious attachments.",
+        heading: "Preventive Maintenance & Lifecycle Management",
+        description: "Scheduled health checks to catch degrading power supplies, failing disks, and dust accumulation.",
         items: [
-          "Implementation and validation of SPF, DKIM, and DMARC DNS policies",
-          "Inbound attachment sandboxing and suspicious link rewriting",
-          "Display-name spoofing protection for executive and finance mailboxes",
-          "Safe mailbox authentication practices enforcing multi-factor authentication (MFA)",
+          "Biannual internal physical cleaning and filter replacement",
+          "Firmware updates on enterprise switches, SANs, and server boards",
+          "Hardware health monitoring (fan RPM, PSU voltages, disk S.M.A.R.T.)",
+          "Hardware upgrade path planning before reaching end-of-service-life",
         ],
       },
       {
-        heading: "Access Control & Attack Surface Reduction",
-        description: "Closing unnecessary open ports and establishing least-privilege administrative practices.",
+        heading: "Multi-Location Branch Infrastructure Support",
+        description: "Uniform infrastructure standards across head offices, remote warehouses, and dispatch hubs.",
         items: [
-          "Elimination of direct internet-exposed Remote Desktop (RDP) ports",
-          "Role-based network access separating guest devices, IoT sensors, and corporate assets",
-          "Privilege separation: preventing regular day-to-day work under domain admin accounts",
-          "Pragmatic data protection guidelines aligned with modern Indian business regulatory awareness",
+          "Standardized branch IT rack schematics and hardware Bill-of-Materials",
+          "Remote out-of-band management setup for remote site troubleshooting",
+          "Vendor coordination for third-party warranty dispatch",
+          "Periodic multi-site status and capacity utilization reports",
         ],
       },
     ],
     process: [
       {
         step: "01",
-        title: "Perimeter & Posture Audit",
-        description: "We review external port exposure, firewall rules, endpoint software status, and email DNS records.",
+        title: "Audit & Site Survey",
+        description: "We document existing equipment, physical space, electrical supplies, cooling, and pain points.",
       },
       {
         step: "02",
-        title: "Hardening Roadmap",
-        description: "Prioritized recommendations addressing immediate vulnerabilities first (e.g. exposed RDP, weak DNS).",
+        title: "Topology & Rack Design",
+        description: "Clear architectural schematics showing rack layout, cable pathways, and power distribution.",
       },
       {
         step: "03",
-        title: "Firewall & Agent Rollout",
-        description: "Phased deployment of firewall policies and managed endpoint agents across workstations.",
+        title: "Structured Execution",
+        description: "Clean racking, labeling, structured cabling, configuration, and end-to-end testing.",
       },
       {
         step: "04",
-        title: "Monitoring & Review",
-        description: "Routine alert review, firmware security updates, and quarterly security posture checks.",
+        title: "Handover & Lifecycle Support",
+        description: "Comprehensive asset documentation, network diagram delivery, and ongoing preventive maintenance.",
       },
     ],
     technicalHighlights: [
       {
-        title: "Zero Open RDP",
-        detail: "All remote administrative access routed through encrypted VPNs with mandatory MFA.",
+        title: "Cable Organization",
+        detail: "Zero messy tangles: bundle-tied, velcro-fastened, and numbered at both patch panel and drop.",
       },
       {
-        title: "DMARC Enforcement",
-        detail: "Protecting your brand domain from being used by scammers to send fake invoices to your clients.",
+        title: "Thermal Efficiency",
+        detail: "Separation of cold intake and hot exhaust aisles to maximize equipment lifespan.",
       },
       {
-        title: "Air-Gapped Recovery",
-        detail: "Ensuring backup copies cannot be deleted or encrypted by ransomware running on the primary network.",
+        title: "Power Redundancy",
+        detail: "Dual-circuit routing where supported, with automated UPS load shedding for critical servers.",
       },
     ],
     engagementModels: [
       {
-        title: "Firewall & Security Deployment Project",
-        description: "Turnkey hardware firewall installation, network segmentation, and endpoint protection rollout.",
-        bestFor: "Companies upgrading their internet perimeter or responding to security audit findings.",
+        title: "Installation & Modernization Project",
+        description: "One-time complete overhaul, server room re-racking, cabling cleanup, and asset documentation.",
+        bestFor: "Relocations, office buildouts, or remediation of messy legacy server rooms.",
       },
       {
-        title: "Security Hardening & Review",
-        description: "Independent audit of external attack surface, active directory policies, and email authentication.",
-        bestFor: "Organizations preparing for vendor compliance reviews or client security questionnaires.",
+        title: "Comprehensive Annual Maintenance Contract (AMC)",
+        description: "Scheduled preventive maintenance, emergency incident response, and component servicing.",
+        bestFor: "Established operations needing predictable operational upkeep without full-time staff.",
       },
       {
-        title: "Managed Security Oversight (AMC)",
-        description: "Ongoing firewall firmware maintenance, endpoint alert triage, and policy updates.",
-        bestFor: "Companies seeking active security administration without hiring in-house security analysts.",
+        title: "Fully Managed Infrastructure",
+        description: "Continuous health tracking, proactive patching, lifecycle management, and regular executive reports.",
+        bestFor: "Mid-sized businesses and multi-site distribution operators.",
       },
     ],
     faqs: [
       {
-        question: "Does installing a firewall guarantee our company will never be hacked?",
+        question: "What is the difference between an installation project and an ongoing AMC?",
         answer:
-          "No reputable security provider can promise 100% invulnerability. Security is a continuous process of defense-in-depth: firewalls block unauthorized network probes, endpoint software catches malicious executables, email filters intercept phishing, and air-gapped backups ensure you can recover if an employee clicks a bad link.",
+          "An installation project delivers a turnkey, documented, tested physical setup. An AMC provides ongoing operational assurance: periodic physical servicing, firmware patching, emergency troubleshooting, and warranty coordination.",
       },
       {
-        question: "How do your solutions assist with Indian data protection norms (DPDP)?",
+        question: "Can PRA re-organize an existing 'spaghetti' server rack without shutting down business operations?",
         answer:
-          "We implement technical safeguards: role-based access control, network segmentation, storage encryption, and audit logs. While legal compliance involves organizational policies and data governance, our technical infrastructure ensures your digital assets meet standard data hygiene and security diligence.",
+          "Yes. We schedule cabling overhauls during planned maintenance windows (weekends or overnight) with pre-labeled jumpers and phased reconnections to minimize operational downtime.",
       },
       {
-        question: "Can we install endpoint protection on employees' remote laptops?",
+        question: "Do you supply the server racks and accessories, or can we procure them directly?",
         answer:
-          "Yes. Our centralized endpoint solutions use lightweight cloud-connected agents that enforce security policies, block malicious websites, and report malware incidents regardless of where employees are working.",
+          "Both options are supported. We can supply enterprise-grade racks, PDUs, and cable trays, or work with your existing procurement channels based on detailed technical specifications we provide.",
       },
     ],
-    ctaText: "Discuss Your Security Requirements",
-  },
-  {
-    slug: "cctv-access-control",
-    title: "CCTV, Surveillance & Access Control",
-    subtitle: "High-Definition IP Surveillance, Yard Monitoring, Biometric Attendance & Physical Access",
-    category: "security",
-    categoryLabel: "Physical Systems",
-    tagline: "Total site visibility, perimeter security, and verifiable personnel entry for offices, gates, and warehouses.",
-    icon: "Camera",
-    heroImage: "/images/warehouse-logistics-it.jpg",
-    overview:
-      "Physical security is the first line of defense for logistics yards, factories, and corporate offices. PRA designs and installs commercial-grade IP CCTV systems, Network Video Recorders (NVR), outdoor perimeter cameras, and biometric attendance systems that provide clear visual evidence and verifiable employee access logs.",
-    summaryPoints: [
-      "High-resolution 4MP/4K IP surveillance cameras with infrared night vision and wide dynamic range",
-      "Specialized perimeter, loading dock, vehicle gate, and warehouse tall-aisle camera placement",
-      "Network Video Recorder (NVR) sizing providing adequate retention days without frame drops",
-      "Biometric fingerprint, facial recognition, and RFID access-control turnstiles and door locks",
-    ],
-    scope: [
-      {
-        heading: "Commercial IP CCTV Surveillance Architecture",
-        description: "End-to-end IP video systems engineered for high fidelity, low light, and reliable recording.",
-        items: [
-          "Fixed dome cameras for office interiors, corridors, reception, and cashier stations",
-          "Weatherproof IP67 bullet and turret cameras for outdoor parking, perimeter walls, and dispatch bays",
-          "PTZ (Pan-Tilt-Zoom) cameras for active yard monitoring and vehicle movement tracking",
-          "Wide Dynamic Range (WDR) sensors preventing washed-out images at sunny warehouse shutter entrances",
-        ],
-      },
-      {
-        heading: "NVR Storage & Remote Monitoring Setup",
-        description: "Reliable storage calculations ensuring recordings are preserved for required compliance windows.",
-        items: [
-          "Enterprise surveillance-grade hard drives (WD Purple / Seagate SkyHawk) engineered for 24/7 write duty",
-          "H.265+ smart video compression maximizing storage efficiency without degrading critical details",
-          "Isolated CCTV VLAN preventing security cameras from saturating primary office internet",
-          "Secure remote viewing on authorized manager laptops and mobile devices via encrypted streams",
-        ],
-      },
-      {
-        heading: "Biometric Attendance & Access Control",
-        description: "Regulating entry to server rooms, corporate offices, and warehouse floors with automated logging.",
-        items: [
-          "High-speed optical fingerprint and contactless facial recognition terminals",
-          "Electromagnetic (EM) door locks, drop bolts, and emergency exit push-bars with power backup",
-          "Role-based time-slot access (e.g. cleaning crew permitted only during authorized hours)",
-          "Centralized attendance management software integration with payroll CSV exports",
-        ],
-      },
-      {
-        heading: "Loading Dock & Gate Operations Coverage",
-        description: "Specialized optical placement designed for transport hubs, fleet yards, and distribution centers.",
-        items: [
-          "High-angle overview cameras monitoring loading and unloading bays to resolve cargo dispute claims",
-          "Entry gate cameras angled for clear vehicle number plate and driver facial capture",
-          "Strobe and two-way audio integration for remote perimeter warning deterrence",
-          "UPS battery backup keeping surveillance online during grid power transitions",
-        ],
-      },
-    ],
-    process: [
-      {
-        step: "01",
-        title: "Site Walkthrough & Blindspot Analysis",
-        description: "We evaluate lighting conditions, entrance points, yard perimeters, and cabling distances.",
-      },
-      {
-        step: "02",
-        title: "Camera Field-of-View Mapping",
-        description: "Selection of focal lengths (2.8mm wide vs 6mm narrow) ensuring proper identification range.",
-      },
-      {
-        step: "03",
-        title: "Conduit, Cabling & Mounting",
-        description: "Outdoor UV-resistant Cat6 cabling in PVC/metal conduits with surge protection at building entries.",
-      },
-      {
-        step: "04",
-        title: "NVR Tuning & Staff Training",
-        description: "Motion detection zones, recording schedule setup, retention verification, and app training.",
-      },
-    ],
-    technicalHighlights: [
-      {
-        title: "Dedicated CCTV VLAN",
-        detail: "Camera streams never contend with employee internet traffic or video calls.",
-      },
-      {
-        title: "Surveillance Drive Duty",
-        detail: "We use only surveillance-rated drives rated for continuous 24/7 video writes, avoiding desktop drive failures.",
-      },
-      {
-        title: "Smart Search",
-        detail: "Find specific incidents quickly using motion-region filtering rather than scrubbing days of footage.",
-      },
-    ],
-    engagementModels: [
-      {
-        title: "Turnkey CCTV & Access Installation",
-        description: "Complete equipment supply, cabling, mounting, NVR configuration, and commissioning.",
-        bestFor: "New premises, facility expansions, or replacing degraded analog camera setups.",
-      },
-      {
-        title: "CCTV System AMC & Maintenance",
-        description: "Quarterly camera lens cleaning, angle adjustments, NVR HDD health checks, and quick repairs.",
-        bestFor: "Enterprises with extensive camera counts that cannot afford undetected recording failures.",
-      },
-      {
-        title: "Biometric & Door Access Upgrades",
-        description: "Retrofitting modern facial-recognition or card locks onto existing corporate glass or wooden doors.",
-        bestFor: "Offices seeking modern contactless entry and automated attendance tracking.",
-      },
-    ],
-    faqs: [
-      {
-        question: "What is the practical difference between analog HD cameras and IP network cameras?",
-        answer:
-          "IP cameras digitize video onboard and transmit high-bandwidth digital data over standard Cat6 ethernet, offering sharper detail, digital zoom without extreme pixelation, simpler cabling via PoE (Power over Ethernet), and superior encryption.",
-      },
-      {
-        question: "How many days of video recordings can our NVR store?",
-        answer:
-          "Storage duration depends on camera resolution, bitrate, frame rate, motion triggers, and hard drive capacity. We calculate the exact hard drive terabytes needed to guarantee your required retention window (e.g. 15, 30, or 60 days).",
-      },
-      {
-        question: "Can biometric attendance systems link to our payroll software?",
-        answer:
-          "Yes. Our attendance management software can generate standard shift reports, overtime records, and export CSV/Excel files compatible with standard Indian payroll and ERP systems.",
-      },
-    ],
-    ctaText: "Request a CCTV Site Assessment",
+    ctaText: "Discuss Your Infrastructure",
   },
   {
     slug: "servers-storage-backup",
@@ -594,7 +463,7 @@ export const servicesData: ServiceItem[] = [
         items: [
           "Enterprise NAS deployment (Synology, QNAP, TrueNAS) for department shared folders",
           "Windows Active Directory / LDAP integration for single-sign-on folder permissions",
-          "Immutable Btrfs/ZFS snapshots shielding files from accidental deletion and ransomware tampering",
+          "Immutable Btrfs/ZFS snapshots shielding files from accidental deletion and tampering",
           "10GbE SFP+ / RJ45 high-speed connectivity for large design, accounting, and database files",
         ],
       },
@@ -651,7 +520,7 @@ export const servicesData: ServiceItem[] = [
         detail: "RAID arrays automatically rebuild onto an idling spare disk the instant a mechanical drive fails.",
       },
       {
-        title: "Ransomware Immutability",
+        title: "Snapshot Immutability",
         detail: "Read-only snapshots that cannot be modified or deleted even if admin credentials are compromised.",
       },
     ],
@@ -676,7 +545,7 @@ export const servicesData: ServiceItem[] = [
       {
         question: "Why isn't copying files to an external USB drive considered a proper business backup?",
         answer:
-          "USB drives rely on human discipline to plug in, lack automated verification, have high mechanical failure rates, offer no version history if a file was corrupted weeks ago, and are vulnerable to being encrypted by ransomware if left connected.",
+          "USB drives rely on human discipline to plug in, lack automated verification, have high mechanical failure rates, offer no version history if a file was corrupted weeks ago, and are vulnerable to physical loss.",
       },
       {
         question: "What is the difference between RTO and RPO?",
@@ -701,7 +570,7 @@ export const servicesData: ServiceItem[] = [
     icon: "Headphones",
     heroImage: "/images/operations-center.jpg",
     overview:
-      "IT issues shouldn't halt your workday. A printer that won't connect, a corrupt email profile, or a server hanging during month-end billing directly impacts your revenue. PRA's Managed IT Support and Annual Maintenance Contracts (AMC) provide structured helpdesk resolution, routine preventive maintenance, and disciplined asset tracking.",
+      "IT issues shouldn't halt your workday. A printer that won't connect, a corrupt email profile, or a server hanging during month-end billing directly impacts your revenue. PRA's Managed IT Support and Annual Maintenance Contracts (AMC) provide structured helpdesk resolution, routine preventive maintenance, and disciplined asset tracking for businesses across Uran, JNPT, and Navi Mumbai.",
     summaryPoints: [
       "Structured helpdesk support resolving everyday user workstation, software, and peripheral issues",
       "Scheduled preventive maintenance servicing hardware, cleaning dust, and applying critical updates",
@@ -725,7 +594,7 @@ export const servicesData: ServiceItem[] = [
         items: [
           "Scheduled physical cleaning of internal fans, power supplies, and heat sinks to prevent thermal throttling",
           "Operating system patch management applied during off-peak hours after testing",
-          "Antivirus and endpoint security definition updates and scheduled deep scans",
+          "Antivirus and endpoint definition updates and scheduled deep scans",
           "Disk cleanup, temporary file purging, and drive health (S.M.A.R.T.) telemetry checks",
         ],
       },
@@ -774,8 +643,8 @@ export const servicesData: ServiceItem[] = [
     ],
     technicalHighlights: [
       {
-        title: "Clear SLA Expectations",
-        detail: "Transparent, realistic response times based on incident severity rather than misleading 24/7 marketing claims.",
+        title: "Rapid Local Dispatch",
+        detail: "Engineers stationed in Uran & Navi Mumbai provide fast on-site arrival for critical outages.",
       },
       {
         title: "Asset Inventory",
@@ -807,12 +676,12 @@ export const servicesData: ServiceItem[] = [
       {
         question: "How do users submit support requests?",
         answer:
-          "Users can submit issues through our dedicated support email or phone line. Every issue is logged, prioritized by operational impact, and tracked through to verified resolution.",
+          "Users can submit issues through our dedicated sales/support desk at sales@praitsolutions.com or by calling +91 98679 59932 / +91 77198 09134. Every issue is logged and prioritized by operational impact.",
       },
       {
         question: "Do you provide onsite support or only remote assistance?",
         answer:
-          "Both. Remote support resolves the majority of software, email, and configuration issues within minutes. For hardware failures, network cabling, rack servicing, and physical troubleshooting, our engineers conduct scheduled or emergency onsite visits.",
+          "Both. Remote support resolves the majority of software, email, and configuration issues within minutes. For hardware failures, network cabling, rack servicing, and physical troubleshooting, our engineers conduct scheduled or emergency onsite visits across Uran, Navi Mumbai, and Mumbai MMR.",
       },
       {
         question: "Can an AMC be customized for multiple branch locations or warehouses?",
@@ -820,7 +689,7 @@ export const servicesData: ServiceItem[] = [
           "Yes. We structure multi-location AMCs that combine centralized remote helpdesk for all branches with scheduled physical preventive visits to warehouses and satellite facilities.",
       },
     ],
-    ctaText: "Discuss an IT Support Plan",
+    ctaText: "Discuss an IT Support & AMC Plan",
   },
   {
     slug: "corporate-it",
@@ -830,13 +699,13 @@ export const servicesData: ServiceItem[] = [
     categoryLabel: "Workplace & Hardware",
     tagline: "Commercial-grade IT equipment and verified software licenses matched to real business requirements.",
     icon: "Laptop",
-    heroImage: "/images/operations-center.jpg",
+    heroImage: "/images/corporate-workstations.jpg",
     overview:
       "Consumer laptops and non-genuine software introduce security vulnerabilities, sudden driver crashes, and severe compliance liabilities. PRA assists corporate clients in procuring commercial-grade business desktops, rugged laptops, thin clients, and genuine volume software licenses engineered for multi-year enterprise duty.",
     summaryPoints: [
       "Commercial-grade business laptops and desktops (Dell Latitude/OptiPlex, HP EliteBook/ProDesk, Lenovo ThinkPad)",
       "Specialized CAD/engineering workstations, thin clients, and durable barcode scanning terminals",
-      "Genuine Microsoft 365, Windows Pro, Adobe Creative Cloud, and enterprise antivirus licensing",
+      "Genuine Microsoft 365, Windows Pro, Adobe Creative Cloud, and business antivirus licensing",
       "Standardized corporate imaging, domain joining, security agent pre-installation, and zero-touch rollout",
     ],
     scope: [
@@ -1079,7 +948,7 @@ export const servicesData: ServiceItem[] = [
       {
         question: "Do you provide hosting and maintenance after launch?",
         answer:
-          "Yes. We offer managed hosting on approved cloud providers (AWS, Azure, DigitalOcean) or on your own internal servers, along with software maintenance contracts covering bug fixes, security patches, and OS compatibility updates.",
+          "Yes. We offer managed hosting on approved cloud providers (AWS, Azure, DigitalOcean) or on your own internal servers, along with software maintenance contracts covering bug fixes and updates.",
       },
     ],
     ctaText: "Discuss a Software Project",

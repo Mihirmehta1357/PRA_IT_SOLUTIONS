@@ -1,16 +1,17 @@
 import React from 'react';
-import { Routes, Route } from 'react-router-dom';
+import { Routes, Route, Navigate } from 'react-router-dom';
 import { SiteHeader } from './components/layout/SiteHeader';
 import { SiteFooter } from './components/layout/SiteFooter';
 import { ScrollToTop } from './components/common/ScrollToTop';
+import { SEOHead } from './components/common/SEOHead';
+import { FloatingContactWidget } from './components/ui/FloatingContactWidget';
 
-// 15 Dedicated Pages
+// Dedicated Pages
 import { Home } from './pages/Home';
 import { About } from './pages/About';
 import { ServicesIndex } from './pages/ServicesIndex';
 import { ServiceItInfrastructure } from './pages/services/ServiceItInfrastructure';
 import { ServiceNetworking } from './pages/services/ServiceNetworking';
-import { ServiceSecurity } from './pages/services/ServiceSecurity';
 import { ServiceCctvAccessControl } from './pages/services/ServiceCctvAccessControl';
 import { ServiceServersStorageBackup } from './pages/services/ServiceServersStorageBackup';
 import { ServiceManagedItSupport } from './pages/services/ServiceManagedItSupport';
@@ -25,6 +26,7 @@ import { NotFound } from './pages/NotFound';
 export const App: React.FC = () => {
   return (
     <div className="app-root">
+      <SEOHead />
       <ScrollToTop />
       <SiteHeader />
       <main id="main-content">
@@ -44,8 +46,8 @@ export const App: React.FC = () => {
           {/* Page 05 — Networking and Connectivity */}
           <Route path="/services/networking" element={<ServiceNetworking />} />
 
-          {/* Page 06 — Cybersecurity and Data Protection */}
-          <Route path="/services/security" element={<ServiceSecurity />} />
+          {/* Redirect deprecated cybersecurity route to services directory */}
+          <Route path="/services/security" element={<Navigate to="/services" replace />} />
 
           {/* Page 07 — CCTV, Surveillance and Access Control */}
           <Route path="/services/cctv-access-control" element={<ServiceCctvAccessControl />} />
@@ -79,6 +81,7 @@ export const App: React.FC = () => {
         </Routes>
       </main>
       <SiteFooter />
+      <FloatingContactWidget />
     </div>
   );
 };

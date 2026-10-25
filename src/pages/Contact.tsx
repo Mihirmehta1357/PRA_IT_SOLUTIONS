@@ -8,7 +8,9 @@ import {
   Clock,
   ShieldCheck,
   CheckCircle2,
-  Send
+  Send,
+  MessageCircle,
+  ExternalLink
 } from 'lucide-react';
 import './Contact.css';
 
@@ -209,10 +211,10 @@ export const Contact: React.FC = () => {
                     value={formData.serviceCategory}
                     onChange={handleChange}
                   >
+                    <option value="cctv-access-control">CCTV Surveillance &amp; Video Security</option>
+                    <option value="biometric-access">Biometric Attendance &amp; Door Access</option>
                     <option value="networking">Networking &amp; Structured Cabling</option>
                     <option value="it-infrastructure">IT Infrastructure &amp; Server Rooms</option>
-                    <option value="security">Cybersecurity &amp; Next-Gen Firewalls</option>
-                    <option value="cctv-access-control">CCTV, Surveillance &amp; Biometrics</option>
                     <option value="servers-storage-backup">Servers, NAS Storage &amp; 3-2-1 Backup</option>
                     <option value="managed-it-support">Managed IT Support &amp; AMC Contract</option>
                     <option value="corporate-it">Corporate Hardware &amp; Software Licensing</option>
@@ -459,11 +461,11 @@ export const Contact: React.FC = () => {
 
               <div className="info-channels-list">
                 <div className="info-channel-item">
-                  <div className="channel-icon-wrap"><Mail size={18} /></div>
+                  <div className="channel-icon-wrap"><Phone size={18} /></div>
                   <div>
-                    <span className="channel-label">General &amp; Technical Enquiries</span>
-                    <a href={`mailto:${siteConfig.contact.email}`} className="channel-link">
-                      {siteConfig.contact.email}
+                    <span className="channel-label">Sales &amp; Projects Desk</span>
+                    <a href={`tel:${siteConfig.contact.phonePrimary}`} className="channel-link">
+                      {siteConfig.contact.displayPhonePrimary}
                     </a>
                   </div>
                 </div>
@@ -471,9 +473,35 @@ export const Contact: React.FC = () => {
                 <div className="info-channel-item">
                   <div className="channel-icon-wrap"><Phone size={18} /></div>
                   <div>
-                    <span className="channel-label">Engineering Desk</span>
-                    <a href={`tel:${siteConfig.contact.phone}`} className="channel-link">
-                      {siteConfig.contact.displayPhone}
+                    <span className="channel-label">Technical Support &amp; AMC Desk</span>
+                    <a href={`tel:${siteConfig.contact.phoneSecondary}`} className="channel-link">
+                      {siteConfig.contact.displayPhoneSecondary}
+                    </a>
+                  </div>
+                </div>
+
+                <div className="info-channel-item">
+                  <div className="channel-icon-wrap"><MessageCircle size={18} /></div>
+                  <div>
+                    <span className="channel-label">Instant WhatsApp Chat</span>
+                    <a
+                      href={siteConfig.contact.whatsappUrl}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="channel-link"
+                      style={{ color: '#25D366', fontWeight: 600 }}
+                    >
+                      Connect on WhatsApp (+91 98679 59932)
+                    </a>
+                  </div>
+                </div>
+
+                <div className="info-channel-item">
+                  <div className="channel-icon-wrap"><Mail size={18} /></div>
+                  <div>
+                    <span className="channel-label">Corporate Email</span>
+                    <a href={`mailto:${siteConfig.contact.email}`} className="channel-link">
+                      {siteConfig.contact.email}
                     </a>
                   </div>
                 </div>
@@ -481,7 +509,7 @@ export const Contact: React.FC = () => {
                 <div className="info-channel-item">
                   <div className="channel-icon-wrap"><Clock size={18} /></div>
                   <div>
-                    <span className="channel-label">Business Working Hours</span>
+                    <span className="channel-label">Business Hours &amp; AMC Dispatch</span>
                     <span className="channel-text">{siteConfig.contact.businessHours}</span>
                   </div>
                 </div>
@@ -489,13 +517,47 @@ export const Contact: React.FC = () => {
                 <div className="info-channel-item">
                   <div className="channel-icon-wrap"><MapPin size={18} /></div>
                   <div>
-                    <span className="channel-label">Registered Technical Operations</span>
+                    <span className="channel-label">Registered Office &amp; Engineering Operations</span>
                     <span className="channel-text">
-                      {siteConfig.contact.address.line1},<br />
-                      {siteConfig.contact.address.line2},<br />
-                      {siteConfig.contact.address.city}, {siteConfig.contact.address.state} — {siteConfig.contact.address.postalCode}, {siteConfig.contact.address.country}
+                      <strong>Kalpana Niwas, Shop no. 1</strong><br />
+                      Fish Market Road, Kotnaka Near Riksha Stop<br />
+                      Uran, Navi Mumbai - 400702, Maharashtra, India
                     </span>
+                    <div style={{ marginTop: '6px' }}>
+                      <a
+                        href={siteConfig.contact.mapUrl}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="channel-link"
+                        style={{ fontSize: '0.82rem', display: 'inline-flex', alignItems: 'center', gap: '4px' }}
+                      >
+                        Open in Google Maps <ExternalLink size={12} />
+                      </a>
+                    </div>
                   </div>
+                </div>
+              </div>
+
+              {/* Verified GSTIN Badge Box */}
+              <div className="gst-verification-panel" style={{
+                marginTop: '1.25rem',
+                background: 'rgba(41, 26, 43, 0.05)',
+                border: '1px solid rgba(41, 26, 43, 0.15)',
+                borderLeft: '4px solid #B85F3B',
+                borderRadius: '6px',
+                padding: '12px 14px'
+              }}>
+                <div style={{ display: 'flex', alignItems: 'center', gap: '6px', marginBottom: '4px' }}>
+                  <CheckCircle2 size={15} style={{ color: '#16A34A' }} />
+                  <span style={{ fontSize: '0.72rem', fontWeight: 700, letterSpacing: '0.06em', color: '#291A2B' }}>
+                    REGISTERED B2B TAX ENTITY
+                  </span>
+                </div>
+                <div style={{ fontSize: '0.88rem', fontFamily: 'monospace', fontWeight: 700, color: '#291A2B' }}>
+                  GSTIN: {siteConfig.gstNumber}
+                </div>
+                <div style={{ fontSize: '0.72rem', color: '#63615A', marginTop: '2px' }}>
+                  Official B2B Tax Invoicing · State: 27 (Maharashtra)
                 </div>
               </div>
 
