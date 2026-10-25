@@ -1,0 +1,404 @@
+.logistics-page {
+  background-color: var(--color-warm-ivory);
+}
+
+.logistics-hero {
+  background-color: var(--color-deep-plum);
+  color: var(--color-warm-ivory);
+  padding: clamp(3rem, 6vw, 5.5rem) 0 clamp(2.5rem, 5vw, 4rem);
+  border-bottom: 2px solid var(--color-burnt-copper);
+}
+
+.logistics-hero-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 3rem;
+  align-items: center;
+}
+
+@media (min-width: 992px) {
+  .logistics-hero-grid {
+    grid-template-columns: 1.15fr 0.85fr;
+    gap: 4rem;
+  }
+}
+
+.logistics-h1 {
+  color: var(--color-warm-ivory);
+  font-size: clamp(2.4rem, 4.5vw, 3.8rem);
+  margin-bottom: 1.25rem;
+}
+
+.logistics-hero-lead {
+  font-size: 1.15rem;
+  color: #C7BFBE;
+  line-height: 1.65;
+  margin-bottom: 2.25rem;
+  max-width: 620px;
+}
+
+.logistics-hero-actions {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 1.25rem;
+}
+
+.logistics-hero-image-frame {
+  position: relative;
+  border-radius: var(--radius-sm);
+  overflow: hidden;
+  border: 1px solid rgba(217, 206, 196, 0.2);
+  box-shadow: 0 16px 40px rgba(0, 0, 0, 0.4);
+}
+
+.logistics-hero-img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.logistics-hero-badge {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: rgba(41, 26, 43, 0.92);
+  backdrop-filter: blur(4px);
+  padding: 1rem 1.25rem;
+  border-top: 1px solid var(--color-burnt-copper);
+  display: flex;
+  flex-direction: column;
+  gap: 0.2rem;
+}
+
+.badge-tag {
+  font-family: var(--font-mono);
+  font-size: 0.65rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--color-copper-tint);
+}
+
+.badge-title {
+  font-size: 0.9rem;
+  font-weight: 500;
+  color: var(--color-warm-ivory);
+}
+
+/* Challenges Section */
+.logistics-challenges-section {
+  background-color: var(--color-surface-muted);
+  border-bottom: 1px solid var(--color-border-light);
+}
+
+.challenges-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1.75rem;
+}
+
+@media (min-width: 640px) {
+  .challenges-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (min-width: 1024px) {
+  .challenges-grid {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+.challenge-card {
+  background-color: var(--color-white);
+  border: 1px solid var(--color-border-light);
+  border-radius: var(--radius-sm);
+  padding: 2rem 1.5rem;
+  display: flex;
+  flex-direction: column;
+  transition: all var(--transition-normal);
+}
+
+.challenge-card:hover {
+  border-color: var(--color-burnt-copper);
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-sm);
+}
+
+.challenge-icon {
+  color: var(--color-burnt-copper);
+  margin-bottom: 1rem;
+}
+
+.challenge-card h3 {
+  font-size: 1.25rem;
+  color: var(--color-deep-plum);
+  margin-bottom: 0.5rem;
+}
+
+.challenge-card p {
+  font-size: 0.9rem;
+  color: var(--color-text-secondary);
+  line-height: 1.55;
+}
+
+/* 9-Pillars Capabilities Grid */
+.logistics-solutions-section {
+  background-color: var(--color-warm-ivory);
+}
+
+.capabilities-9-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1.75rem;
+}
+
+@media (min-width: 640px) {
+  .capabilities-9-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (min-width: 1024px) {
+  .capabilities-9-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+.cap-9-card {
+  background-color: var(--color-white);
+  border: 1px solid var(--color-border-light);
+  border-radius: var(--radius-sm);
+  padding: 2rem 1.75rem;
+  display: flex;
+  flex-direction: column;
+  transition: all var(--transition-normal);
+}
+
+.cap-9-card:hover {
+  border-color: var(--color-burnt-copper);
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-sm);
+}
+
+.cap-9-num {
+  font-family: var(--font-mono);
+  font-size: 1.15rem;
+  font-weight: 700;
+  color: var(--color-burnt-copper);
+  margin-bottom: 0.75rem;
+}
+
+.cap-9-card h4 {
+  font-size: 1.3rem;
+  color: var(--color-deep-plum);
+  margin-bottom: 0.5rem;
+}
+
+.cap-9-card p {
+  font-size: 0.92rem;
+  color: var(--color-text-secondary);
+  line-height: 1.55;
+  margin-bottom: 1.25rem;
+  flex-grow: 1;
+}
+
+.cap-9-link {
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: var(--color-burnt-copper);
+  text-decoration: none;
+  transition: transform var(--transition-fast);
+}
+
+.cap-9-link:hover {
+  transform: translateX(4px);
+}
+
+/* Logistics Diagram Section */
+.logistics-diagram-section {
+  padding: 2rem 0;
+  background-color: var(--color-surface-muted);
+  border-top: 1px solid var(--color-border-light);
+  border-bottom: 1px solid var(--color-border-light);
+}
+
+/* Logistics Scenario Showcase */
+.logistics-scenario-section {
+  background-color: var(--color-warm-ivory);
+}
+
+.scenario-feature-card {
+  background-color: var(--color-white);
+  border: 1px solid var(--color-border-light);
+  border-radius: var(--radius-sm);
+  padding: clamp(2rem, 4vw, 3.5rem);
+  box-shadow: var(--shadow-md);
+}
+
+.scenario-feature-badge {
+  display: inline-block;
+  background-color: var(--color-deep-plum);
+  color: var(--color-copper-tint);
+  font-family: var(--font-mono);
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  padding: 0.3rem 0.75rem;
+  border-radius: var(--radius-sm);
+  margin-bottom: 1.5rem;
+}
+
+.scenario-feature-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 3rem;
+  align-items: center;
+}
+
+@media (min-width: 992px) {
+  .scenario-feature-grid {
+    grid-template-columns: 1.15fr 0.85fr;
+  }
+}
+
+.scenario-label {
+  font-family: var(--font-mono);
+  font-size: 0.75rem;
+  font-weight: 600;
+  color: var(--color-burnt-copper);
+  letter-spacing: 0.1em;
+  display: block;
+  margin-bottom: 0.35rem;
+}
+
+.scenario-headline {
+  font-size: clamp(1.6rem, 3vw, 2.2rem);
+  color: var(--color-deep-plum);
+  margin-bottom: 1rem;
+}
+
+.scenario-context {
+  font-size: 1.05rem;
+  color: var(--color-text-secondary);
+  line-height: 1.6;
+  margin-bottom: 1.75rem;
+}
+
+.scenario-steps {
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+}
+
+.scenario-step-item strong {
+  display: block;
+  font-size: 0.95rem;
+  color: var(--color-deep-plum);
+  margin-bottom: 0.35rem;
+}
+
+.scenario-step-item p {
+  font-size: 0.92rem;
+  color: var(--color-body);
+  line-height: 1.55;
+}
+
+.scenario-outcomes {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 0.45rem;
+  margin-top: 0.35rem;
+  font-size: 0.9rem;
+  color: var(--color-body);
+}
+
+.scenario-outcomes li {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.check-copper {
+  color: var(--color-burnt-copper);
+  flex-shrink: 0;
+}
+
+.scenario-feature-img-wrap {
+  border-radius: var(--radius-sm);
+  overflow: hidden;
+  border: 1px solid var(--color-border-light);
+}
+
+.scenario-feature-img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.scenario-disclaimer {
+  font-size: 0.75rem;
+  font-style: italic;
+  color: var(--color-text-muted);
+  padding: 0.75rem;
+  background-color: var(--color-surface-muted);
+  border-top: 1px solid var(--color-border-subtle);
+}
+
+/* Workflow Steps */
+.logistics-workflow-section {
+  background-color: var(--color-surface-muted);
+  border-top: 1px solid var(--color-border-light);
+}
+
+.workflow-steps-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1.5rem;
+}
+
+@media (min-width: 640px) {
+  .workflow-steps-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (min-width: 1024px) {
+  .workflow-steps-grid {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+.workflow-card {
+  background-color: var(--color-white);
+  border: 1px solid var(--color-border-light);
+  border-radius: var(--radius-sm);
+  padding: 1.75rem 1.5rem;
+  display: flex;
+  flex-direction: column;
+}
+
+.wf-num {
+  font-family: var(--font-mono);
+  font-size: 0.78rem;
+  font-weight: 700;
+  color: var(--color-burnt-copper);
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  margin-bottom: 0.75rem;
+}
+
+.workflow-card h4 {
+  font-size: 1.2rem;
+  color: var(--color-deep-plum);
+  margin-bottom: 0.5rem;
+}
+
+.workflow-card p {
+  font-size: 0.9rem;
+  color: var(--color-text-secondary);
+  line-height: 1.55;
+}

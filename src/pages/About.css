@@ -1,0 +1,318 @@
+.about-page {
+  background-color: var(--color-warm-ivory);
+}
+
+.about-hero-section {
+  padding: clamp(3rem, 6vw, 5rem) 0 clamp(2rem, 4vw, 3.5rem);
+  border-bottom: 1px solid var(--color-border-light);
+}
+
+.about-hero-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 2.5rem;
+  align-items: center;
+}
+
+@media (min-width: 992px) {
+  .about-hero-grid {
+    grid-template-columns: 1.25fr 0.75fr;
+    gap: 3.5rem;
+  }
+}
+
+.about-hero-title {
+  font-size: clamp(2.4rem, 4.5vw, 3.8rem);
+  margin-bottom: 1.25rem;
+}
+
+.about-hero-lead {
+  font-size: 1.2rem;
+  color: var(--color-text-secondary);
+  line-height: 1.65;
+  max-width: 660px;
+}
+
+.about-hero-callout {
+  background-color: var(--color-deep-plum);
+  border-radius: var(--radius-sm);
+  padding: 2.25rem 2rem;
+  color: var(--color-warm-ivory);
+  border-left: 3px solid var(--color-burnt-copper);
+  box-shadow: var(--shadow-md);
+}
+
+.callout-badge {
+  font-family: var(--font-mono);
+  font-size: 0.7rem;
+  letter-spacing: 0.12em;
+  color: var(--color-copper-tint);
+  text-transform: uppercase;
+  margin-bottom: 0.85rem;
+}
+
+.callout-quote {
+  font-family: var(--font-serif);
+  font-size: 1.25rem;
+  font-style: italic;
+  line-height: 1.5;
+  margin-bottom: 1.5rem;
+  color: var(--color-warm-ivory);
+}
+
+.callout-signature {
+  display: flex;
+  flex-direction: column;
+  font-size: 0.85rem;
+  border-top: 1px solid rgba(255, 255, 255, 0.12);
+  padding-top: 0.85rem;
+}
+
+.callout-signature strong {
+  color: var(--color-copper-tint);
+}
+
+.callout-signature span {
+  color: #BDB4B2;
+}
+
+/* Philosophy Strip */
+.about-philosophy-strip {
+  background-color: var(--color-surface-muted);
+  border-bottom: 1px solid var(--color-border-light);
+  padding: clamp(2.5rem, 4vw, 3.5rem) 0;
+}
+
+.philosophy-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 2rem;
+}
+
+@media (min-width: 640px) {
+  .philosophy-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (min-width: 1024px) {
+  .philosophy-grid {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+.philosophy-item {
+  border-left: 2px solid var(--color-burnt-copper);
+  padding-left: 1.25rem;
+}
+
+.philosophy-num {
+  font-family: var(--font-mono);
+  font-size: 0.8rem;
+  color: var(--color-burnt-copper);
+  font-weight: 700;
+  display: block;
+  margin-bottom: 0.4rem;
+}
+
+.philosophy-item h4 {
+  font-size: 1.2rem;
+  color: var(--color-deep-plum);
+  margin-bottom: 0.5rem;
+}
+
+.philosophy-item p {
+  font-size: 0.9rem;
+  color: var(--color-text-secondary);
+  line-height: 1.55;
+}
+
+/* Narrative Section */
+.about-narrative-section {
+  background-color: var(--color-warm-ivory);
+}
+
+.about-narrative-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 3rem;
+  align-items: center;
+}
+
+@media (min-width: 992px) {
+  .about-narrative-grid {
+    grid-template-columns: 1.15fr 0.85fr;
+    gap: 4rem;
+  }
+}
+
+.narrative-title {
+  font-size: clamp(2rem, 3.5vw, 2.8rem);
+  margin-bottom: 1.5rem;
+}
+
+.narrative-text {
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+  font-size: 1.05rem;
+  color: var(--color-body);
+  line-height: 1.7;
+}
+
+.narrative-visual-frame {
+  position: relative;
+  border-radius: var(--radius-sm);
+  overflow: hidden;
+  border: 1px solid var(--color-border-light);
+  box-shadow: var(--shadow-md);
+}
+
+.narrative-img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.narrative-annotation {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: rgba(41, 26, 43, 0.9);
+  backdrop-filter: blur(4px);
+  color: var(--color-warm-ivory);
+  padding: 1rem 1.25rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.2rem;
+  border-top: 1px solid var(--color-burnt-copper);
+}
+
+.narrative-annotation strong {
+  font-family: var(--font-mono);
+  font-size: 0.7rem;
+  letter-spacing: 0.12em;
+  color: var(--color-copper-tint);
+}
+
+.narrative-annotation span {
+  font-size: 0.85rem;
+  color: #D3CDC6;
+}
+
+/* Engagement Models */
+.about-models-section {
+  background-color: var(--color-surface-muted);
+  border-top: 1px solid var(--color-border-light);
+  border-bottom: 1px solid var(--color-border-light);
+}
+
+.engagement-models-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 2rem;
+}
+
+@media (min-width: 992px) {
+  .engagement-models-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+.model-card {
+  background: var(--color-white);
+  border: 1px solid var(--color-border-light);
+  border-radius: var(--radius-sm);
+  padding: 2.25rem 2rem;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  transition: all var(--transition-normal);
+}
+
+.model-card:hover {
+  border-color: var(--color-burnt-copper);
+  transform: translateY(-3px);
+  box-shadow: var(--shadow-md);
+}
+
+.model-card-featured {
+  border-color: var(--color-burnt-copper);
+  box-shadow: var(--shadow-md);
+}
+
+.model-badge {
+  position: absolute;
+  top: -12px;
+  right: 20px;
+  background-color: var(--color-burnt-copper);
+  color: var(--color-white);
+  font-family: var(--font-mono);
+  font-size: 0.65rem;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  padding: 0.25rem 0.6rem;
+  border-radius: var(--radius-sm);
+}
+
+.model-icon {
+  color: var(--color-burnt-copper);
+  margin-bottom: 1rem;
+}
+
+.model-title {
+  font-size: 1.35rem;
+  color: var(--color-deep-plum);
+  margin-bottom: 0.65rem;
+}
+
+.model-desc {
+  font-size: 0.92rem;
+  color: var(--color-text-secondary);
+  line-height: 1.55;
+  margin-bottom: 1.5rem;
+}
+
+.model-points {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 0.65rem;
+  font-size: 0.88rem;
+  color: var(--color-body);
+  margin-bottom: 1.75rem;
+  flex-grow: 1;
+}
+
+.model-points li {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.model-check {
+  color: var(--color-burnt-copper);
+  flex-shrink: 0;
+}
+
+.model-best-for {
+  font-size: 0.85rem;
+  color: var(--color-text-secondary);
+  border-top: 1px solid var(--color-border-subtle);
+  padding-top: 1rem;
+  line-height: 1.45;
+}
+
+.model-best-for strong {
+  color: var(--color-deep-plum);
+}
+
+.about-process-section {
+  background-color: var(--color-warm-ivory);
+}
+
+.about-process-header {
+  margin-bottom: 2.75rem;
+}

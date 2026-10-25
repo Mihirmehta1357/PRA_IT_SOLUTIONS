@@ -1,0 +1,40 @@
+.section-heading-wrap {
+  margin-bottom: clamp(2rem, 4vw, 3.5rem);
+}
+
+.align-center {
+  text-align: center;
+}
+
+.align-center .eyebrow {
+  justify-content: center;
+}
+
+.align-center .section-heading-sub {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.section-heading-title {
+  margin-bottom: 0.85rem;
+}
+
+.heading-copper-emphasis {
+  color: var(--color-burnt-copper);
+  font-style: italic;
+}
+
+.section-heading-sub {
+  font-size: 1.1rem;
+  color: var(--color-text-secondary);
+  max-width: 680px;
+  line-height: 1.65;
+}
+
+.heading-dark .section-heading-title {
+  color: var(--color-warm-ivory);
+}
+
+.heading-dark .section-heading-sub {
+  color: #C7BFBE;
+}

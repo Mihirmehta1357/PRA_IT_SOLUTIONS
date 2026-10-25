@@ -1,0 +1,63 @@
+:root {
+  /* Brand Signature Colors */
+  --color-deep-plum: #291A2B;
+  --color-burnt-copper: #B85F3B;
+  --color-warm-ivory: #F4EDE1;
+  --color-olive-charcoal: #454839;
+
+  /* Neutrals & Surfaces */
+  --color-body: #342B32;
+  --color-text-secondary: #6D6467;
+  --color-text-muted: #877D80;
+  --color-border-light: #D9CEC4;
+  --color-border-subtle: #E8DFD5;
+  --color-surface-muted: #EAE1D6;
+  --color-surface-card: #FFFFFF;
+  --color-copper-tint: #F1DFD3;
+  --color-copper-hover: #A04F2E;
+  --color-plum-hover: #1F1320;
+  --color-plum-surface: #221524;
+  --color-white: #FFFFFF;
+
+  /* Status Colors */
+  --color-success: #2E6B4F;
+  --color-success-bg: #E8F5EF;
+  --color-error: #A33B3B;
+  --color-error-bg: #FDF0F0;
+
+  /* Typography */
+  --font-serif: 'DM Serif Display', Georgia, serif;
+  --font-sans: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  --font-mono: 'JetBrains Mono', monospace;
+
+  /* Spacing Scale */
+  --space-xs: 0.25rem;
+  --space-sm: 0.5rem;
+  --space-md: 1rem;
+  --space-lg: 1.5rem;
+  --space-xl: 2rem;
+  --space-2xl: 3rem;
+  --space-3xl: 4.5rem;
+  --space-4xl: 6rem;
+
+  /* Layout Containers */
+  --container-max: 1360px;
+  --container-pad: clamp(1rem, 4vw, 2.5rem);
+
+  /* Elevation & Shadows */
+  --shadow-sm: 0 1px 3px rgba(41, 26, 43, 0.05);
+  --shadow-md: 0 4px 16px rgba(41, 26, 43, 0.07);
+  --shadow-lg: 0 12px 36px rgba(41, 26, 43, 0.1);
+  --shadow-hover: 0 14px 40px rgba(41, 26, 43, 0.12);
+
+  /* Border Radii */
+  --radius-sm: 4px;
+  --radius-md: 8px;
+  --radius-lg: 12px;
+  --radius-full: 9999px;
+
+  /* Transitions */
+  --transition-fast: 0.15s ease;
+  --transition-normal: 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+  --transition-smooth: 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+}

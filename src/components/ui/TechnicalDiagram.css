@@ -1,0 +1,159 @@
+.technical-diagram-panel {
+  background-color: var(--color-olive-charcoal);
+  border: 1px solid rgba(217, 206, 196, 0.2);
+  border-radius: var(--radius-sm);
+  padding: clamp(1.75rem, 4vw, 3rem);
+  color: var(--color-warm-ivory);
+  box-shadow: var(--shadow-lg);
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+}
+
+.diagram-header {
+  margin-bottom: 2.25rem;
+}
+
+.diagram-title {
+  color: var(--color-warm-ivory);
+  font-size: clamp(1.5rem, 3vw, 2.1rem);
+  margin-bottom: 0.5rem;
+}
+
+.diagram-subtitle {
+  color: #C7BFBE;
+  font-size: 1rem;
+  max-width: 700px;
+}
+
+.diagram-flow {
+  display: flex;
+  align-items: stretch;
+  gap: 0.75rem;
+  overflow-x: auto;
+  padding-bottom: 1rem;
+  margin-bottom: 1.5rem;
+}
+
+.diagram-node {
+  flex: 1 0 160px;
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(217, 206, 196, 0.2);
+  border-radius: var(--radius-sm);
+  padding: 1.25rem 1rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  cursor: pointer;
+  transition: all var(--transition-normal);
+  color: var(--color-warm-ivory);
+}
+
+.diagram-node:hover {
+  background: rgba(255, 255, 255, 0.1);
+  border-color: var(--color-burnt-copper);
+}
+
+.diagram-node-active {
+  background: rgba(184, 95, 59, 0.18);
+  border-color: var(--color-burnt-copper);
+  box-shadow: 0 0 20px rgba(184, 95, 59, 0.3);
+}
+
+.node-stage-badge {
+  font-family: var(--font-mono);
+  font-size: 0.65rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--color-copper-tint);
+  margin-bottom: 0.65rem;
+}
+
+.node-icon-wrap {
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  background-color: rgba(255, 255, 255, 0.08);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 0.65rem;
+  color: var(--color-burnt-copper);
+  transition: transform var(--transition-fast);
+}
+
+.diagram-node-active .node-icon-wrap {
+  background-color: var(--color-burnt-copper);
+  color: var(--color-white);
+  transform: scale(1.08);
+}
+
+.node-label {
+  font-size: 0.85rem;
+  font-weight: 600;
+  line-height: 1.3;
+}
+
+.diagram-connector {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--color-burnt-copper);
+  flex-shrink: 0;
+  padding: 0 0.25rem;
+}
+
+.connector-line {
+  display: none;
+}
+
+/* Active Card Detail */
+.diagram-active-card {
+  background: rgba(0, 0, 0, 0.25);
+  border: 1px solid rgba(184, 95, 59, 0.4);
+  border-radius: var(--radius-sm);
+  padding: 1.5rem;
+  animation: fadeIn 0.25s ease;
+}
+
+.active-card-meta {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.5rem;
+  margin-bottom: 0.65rem;
+}
+
+.active-card-badge {
+  font-family: var(--font-mono);
+  font-size: 0.72rem;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: var(--color-copper-tint);
+}
+
+.active-card-title {
+  font-family: var(--font-serif);
+  font-size: 1.25rem;
+  color: var(--color-warm-ivory);
+}
+
+.active-card-desc {
+  font-size: 0.95rem;
+  color: #E0D9D5;
+  line-height: 1.6;
+  margin-bottom: 0.85rem;
+}
+
+.active-card-specs {
+  font-family: var(--font-mono);
+  font-size: 0.8rem;
+  color: var(--color-copper-tint);
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  padding-top: 0.75rem;
+}
+
+.specs-label {
+  font-weight: 600;
+  color: var(--color-warm-ivory);
+}
