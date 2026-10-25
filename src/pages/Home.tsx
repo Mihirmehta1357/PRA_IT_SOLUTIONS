@@ -18,9 +18,7 @@ import {
   CheckCircle2,
   Clock,
   Phone,
-  MessageCircle,
-  Truck,
-  Cpu
+  MessageCircle
 } from 'lucide-react';
 import './Home.css';
 
@@ -169,98 +167,9 @@ export const Home: React.FC = () => {
             <HeroCarousel />
           </div>
         </div>
-
-        {/* 2. CORE CAPABILITY PILLARS STRIP */}
-        <div className="hero-pillars-bar">
-          <div className="container pillars-container">
-            <div className="pillar-column reveal-on-scroll reveal-stagger-1">
-              <div className="pillar-header">
-                <span className="pillar-num">01 —</span>
-                <div className="pillar-icon-box">
-                  <Camera size={18} />
-                </div>
-              </div>
-              <h2 className="pillar-title">CCTV &amp; Physical Security</h2>
-              <p className="pillar-desc">
-                High-definition IP surveillance, biometric shift attendance terminals, and electromagnetic door locks for facilities and offices.
-              </p>
-              <Link to="/services/cctv-access-control" className="pillar-link">
-                Explore CCTV &amp; Biometrics <ArrowRight size={14} />
-              </Link>
-            </div>
-
-            <div className="pillar-column reveal-on-scroll reveal-stagger-2">
-              <div className="pillar-header">
-                <span className="pillar-num">02 —</span>
-                <div className="pillar-icon-box">
-                  <Network size={18} />
-                </div>
-              </div>
-              <h2 className="pillar-title">Networks &amp; Infrastructure</h2>
-              <p className="pillar-desc">
-                Certified Cat6A structured cabling, single-mode fiber, managed PoE switches, and 42U server rack management.
-              </p>
-              <Link to="/services/networking" className="pillar-link">
-                Explore Infrastructure <ArrowRight size={14} />
-              </Link>
-            </div>
-
-            <div className="pillar-column reveal-on-scroll reveal-stagger-3">
-              <div className="pillar-header">
-                <span className="pillar-num">03 —</span>
-                <div className="pillar-icon-box">
-                  <Headphones size={18} />
-                </div>
-              </div>
-              <h2 className="pillar-title">Managed IT Support &amp; AMC</h2>
-              <p className="pillar-desc">
-                Routine preventative maintenance, fast 2-4 hr onsite dispatch across Uran &amp; Navi Mumbai, and corporate hardware supply.
-              </p>
-              <Link to="/services/managed-it-support" className="pillar-link">
-                Explore Support &amp; AMC <ArrowRight size={14} />
-              </Link>
-            </div>
-          </div>
-        </div>
       </section>
 
-      {/* 3. VERIFIED STANDARDS STRIP */}
-      <section className="capabilities-strip-section">
-        <div className="container">
-          <div className="capabilities-strip-grid">
-            <div className="capability-strip-item reveal-on-scroll reveal-stagger-1">
-              <div className="cap-icon-wrap"><CheckCircle2 size={16} /></div>
-              <div>
-                <strong>Fluke Wiremap Tested</strong>
-                <span>100% Certified Cat6A &amp; single-mode optical fiber</span>
-              </div>
-            </div>
-            <div className="capability-strip-item reveal-on-scroll reveal-stagger-2">
-              <div className="cap-icon-wrap"><Clock size={16} /></div>
-              <div>
-                <strong>2-4 Hr Rapid Dispatch</strong>
-                <span>Direct response for Uran, JNPT, Panvel &amp; Navi Mumbai</span>
-              </div>
-            </div>
-            <div className="capability-strip-item reveal-on-scroll reveal-stagger-3">
-              <div className="cap-icon-wrap"><Cpu size={16} /></div>
-              <div>
-                <strong>100% Genuine OEM Hardware</strong>
-                <span>Authorized Dell, Lenovo, HP, Hikvision, CP Plus &amp; Synology</span>
-              </div>
-            </div>
-            <div className="capability-strip-item reveal-on-scroll reveal-stagger-4">
-              <div className="cap-icon-wrap"><Truck size={16} /></div>
-              <div>
-                <strong>Logistics &amp; Port Ready</strong>
-                <span>Specialized for CFS yards, high-bay warehouses &amp; depots</span>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* 4. VISUAL HARDWARE & SOLUTIONS SHOWCASE (Inspired by ARP Services, elevated to Enterprise) */}
+      {/* 2. VISUAL HARDWARE & SOLUTIONS SHOWCASE (Enterprise Hardware Grid) */}
       <section className="section-pad showcase-section" id="hardware-solutions">
         <div className="container">
           <div className="section-header-row reveal-slide-left">

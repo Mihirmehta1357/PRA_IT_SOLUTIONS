@@ -1,7 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { siteConfig } from '../../config/siteConfig';
-import { Mail, Phone, MapPin, ArrowUpRight, ShieldCheck, Clock, MessageCircle, ExternalLink, CheckCircle2 } from 'lucide-react';
+import { Mail, Phone, MapPin, ArrowUpRight, ShieldCheck, Clock, ExternalLink, CheckCircle2 } from 'lucide-react';
 import './SiteFooter.css';
 
 export const SiteFooter: React.FC = () => {
@@ -9,32 +9,8 @@ export const SiteFooter: React.FC = () => {
 
   return (
     <footer className="site-footer" id="site-footer">
-      {/* 1. TOP DISPATCH & EMERGENCY SUPPORT MARQUEE / BAR */}
-      <div className="footer-dispatch-banner">
-        <div className="container dispatch-banner-inner">
-          <div className="dispatch-left">
-            <span className="dispatch-live-pulse" />
-            <span className="dispatch-label">RAPID ONSITE DISPATCH:</span>
-            <span className="dispatch-regions">Uran · JNPT Port Corridor · Panvel · Navi Mumbai · Mumbai MMR</span>
-          </div>
-          <div className="dispatch-actions">
-            <a href={`tel:${siteConfig.contact.phonePrimary}`} className="dispatch-action-link" id="footer-call-primary">
-              <Phone size={14} /> Call: {siteConfig.contact.displayPhonePrimary}
-            </a>
-            <span className="dispatch-sep">|</span>
-            <a href={`tel:${siteConfig.contact.phoneSecondary}`} className="dispatch-action-link" id="footer-call-secondary">
-              Support: {siteConfig.contact.displayPhoneSecondary}
-            </a>
-            <span className="dispatch-sep">|</span>
-            <a href={siteConfig.contact.whatsappUrl} target="_blank" rel="noopener noreferrer" className="dispatch-whatsapp-link" id="footer-whatsapp">
-              <MessageCircle size={14} /> WhatsApp
-            </a>
-          </div>
-        </div>
-      </div>
-
       <div className="container footer-main-container">
-        {/* 2. MAIN 4-COLUMN ARCHITECTURAL GRID */}
+        {/* 1. MAIN 4-COLUMN ARCHITECTURAL GRID */}
         <div className="footer-columns-grid">
           {/* Column 1: Registered Identity & Verified Credentials */}
           <div className="footer-col col-identity">
