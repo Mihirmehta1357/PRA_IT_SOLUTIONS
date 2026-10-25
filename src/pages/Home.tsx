@@ -5,6 +5,7 @@ import { projectsData } from '../data/projectsData';
 import { ProcessSteps } from '../components/ui/ProcessSteps';
 import { TechnicalDiagram } from '../components/ui/TechnicalDiagram';
 import { CTASection } from '../components/ui/CTASection';
+import { HeroCarousel } from '../components/ui/HeroCarousel';
 import { useScrollReveal } from '../hooks/useScrollReveal';
 import {
   Camera,
@@ -120,7 +121,7 @@ export const Home: React.FC = () => {
       <section className="hero-section">
         <div className="container hero-container">
           {/* Left Column: Headline, Punchy Subcopy & Actions */}
-          <div className="hero-left">
+          <div className="hero-left reveal-slide-left">
             <div className="hero-eyebrow">
               <span className="hero-eyebrow-line" />
               <span>URAN · JNPT · NAVI MUMBAI · MUMBAI MMR</span>
@@ -163,50 +164,9 @@ export const Home: React.FC = () => {
             </div>
           </div>
 
-          {/* Right Column: Server Infrastructure Visual Frame */}
-          <div className="hero-right">
-            <div className="hero-reticle-graphic" aria-hidden="true">
-              <svg viewBox="0 0 400 400" className="reticle-svg">
-                <circle cx="200" cy="200" r="160" fill="none" stroke="#B85F3B" strokeWidth="1" strokeDasharray="4 4" opacity="0.45" />
-                <circle cx="200" cy="200" r="110" fill="none" stroke="#B85F3B" strokeWidth="1" opacity="0.6" />
-                <line x1="20" y1="200" x2="380" y2="200" stroke="#B85F3B" strokeWidth="1" opacity="0.5" />
-                <line x1="200" y1="20" x2="200" y2="380" stroke="#B85F3B" strokeWidth="1" opacity="0.3" />
-                <circle cx="200" cy="200" r="4" fill="#B85F3B" />
-              </svg>
-              <div className="reticle-caption">
-                RELIABLE<br />
-                ENGINEERING<br />
-                PROVEN IN<br />
-                THE FIELD
-              </div>
-            </div>
-
-            <div className="hero-image-frame">
-              <img
-                src="/images/hero-server-rack.jpg"
-                alt="Immaculate enterprise server room with organized amber cabling and server racks"
-                className="hero-image"
-                loading="eager"
-              />
-
-              <div className="hero-image-overlay-panel">
-                <div className="overlay-meta-top">
-                  SURVEILLANCE<br />
-                  BIOMETRICS<br />
-                  NETWORKS<br />
-                  SERVERS
-                </div>
-                <div className="overlay-counter">
-                  01 <span>/</span> 06
-                </div>
-                <div className="overlay-meta-bottom">
-                  <div className="meta-copper-line" />
-                  SCALABLE<br />
-                  COMPLIANT<br />
-                  ZERO-DOWNTIME
-                </div>
-              </div>
-            </div>
+          {/* Right Column: Auto-Sliding 6-Image High-Definition Showcase */}
+          <div className="hero-right reveal-slide-right">
+            <HeroCarousel />
           </div>
         </div>
 
@@ -303,7 +263,7 @@ export const Home: React.FC = () => {
       {/* 4. VISUAL HARDWARE & SOLUTIONS SHOWCASE (Inspired by ARP Services, elevated to Enterprise) */}
       <section className="section-pad showcase-section" id="hardware-solutions">
         <div className="container">
-          <div className="section-header-row reveal-on-scroll">
+          <div className="section-header-row reveal-slide-left">
             <div>
               <div className="eyebrow">CORE HARDWARE &amp; DEPLOYMENT CAPABILITIES</div>
               <h2 className="section-title">
@@ -324,7 +284,7 @@ export const Home: React.FC = () => {
               return (
                 <div
                   key={index}
-                  className={`showcase-card sheen-card reveal-on-scroll reveal-stagger-${(index % 3) + 1}`}
+                  className={`showcase-card sheen-card reveal-scale reveal-stagger-${(index % 3) + 1}`}
                 >
                   <div className="showcase-card-image-wrap">
                     <img
@@ -430,7 +390,7 @@ export const Home: React.FC = () => {
             </div>
 
             {/* Right Visual Image */}
-            <div className="logistics-feature-visual reveal-on-scroll">
+            <div className="logistics-feature-visual reveal-slide-right">
               <div className="logistics-image-frame">
                 <img
                   src="/images/warehouse-logistics-it.jpg"
@@ -447,14 +407,16 @@ export const Home: React.FC = () => {
           </div>
 
           {/* Interactive Technical Architecture Diagram */}
-          <TechnicalDiagram />
+          <div className="reveal-scale">
+            <TechnicalDiagram />
+          </div>
         </div>
       </section>
 
       {/* 6. SOLUTION SCENARIOS (Practical Illustrative Case Studies) */}
       <section className="section-pad scenarios-section">
         <div className="container">
-          <div className="section-header-row reveal-on-scroll">
+          <div className="section-header-row reveal-slide-left">
             <div>
               <div className="eyebrow">PROVEN BLUEPRINTS</div>
               <h2 className="section-title">
@@ -473,7 +435,7 @@ export const Home: React.FC = () => {
             {projectsData.slice(0, 3).map((item, index) => (
               <div
                 key={item.id}
-                className={`scenario-card sheen-card reveal-on-scroll reveal-stagger-${index + 1}`}
+                className={`scenario-card sheen-card reveal-scale reveal-stagger-${index + 1}`}
               >
                 <div className="scenario-image-wrap">
                   <img src={item.image} alt={item.title} className="scenario-img" loading="lazy" />
@@ -506,7 +468,7 @@ export const Home: React.FC = () => {
       {/* 7. HOW WE WORK (01-04 Methodology) */}
       <section className="section-pad process-section">
         <div className="container">
-          <div className="process-header reveal-on-scroll">
+          <div className="process-header reveal-slide-left">
             <div className="eyebrow">THE PRA METHODOLOGY</div>
             <h2 className="section-title">
               Clear stages, <span className="title-copper">zero ambiguity.</span>
@@ -516,14 +478,16 @@ export const Home: React.FC = () => {
             </p>
           </div>
 
-          <ProcessSteps />
+          <div className="reveal-on-scroll">
+            <ProcessSteps />
+          </div>
         </div>
       </section>
 
       {/* 8. FAST CONSULTATION & LOCAL DISPATCH BANNER */}
-      <section className="local-dispatch-callout reveal-on-scroll">
+      <section className="local-dispatch-callout">
         <div className="container">
-          <div className="dispatch-callout-card">
+          <div className="dispatch-callout-card reveal-scale">
             <div className="callout-content">
               <span className="callout-pill">URAN &amp; NAVI MUMBAI ENGINEERING DESK</span>
               <h3 className="callout-title">Need an infrastructure audit or fast hardware quote?</h3>
@@ -549,12 +513,14 @@ export const Home: React.FC = () => {
       </section>
 
       {/* 9. FINAL CONVERSION CTA */}
-      <CTASection
-        title="Let's build the right technology foundation."
-        subtitle="Share your requirement—whether CCTV surveillance, biometric door locks, structured cabling, or annual AMC upkeep—and we will prepare a clear technical proposal."
-        primaryCtaText="Discuss a Project"
-        primaryCtaLink="/contact"
-      />
+      <div className="reveal-on-scroll">
+        <CTASection
+          title="Let's build the right technology foundation."
+          subtitle="Share your requirement—whether CCTV surveillance, biometric door locks, structured cabling, or annual AMC upkeep—and we will prepare a clear technical proposal."
+          primaryCtaText="Discuss a Project"
+          primaryCtaLink="/contact"
+        />
+      </div>
     </div>
   );
 };

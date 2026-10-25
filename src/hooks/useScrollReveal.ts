@@ -2,19 +2,22 @@ import { useEffect } from 'react';
 
 /**
  * Custom hook to activate smooth intersection-observer scroll reveals
- * across any element with className "reveal-on-scroll".
+ * with move-in and move-out transitions across web components.
  */
 export function useScrollReveal() {
   useEffect(() => {
-    // If user prefers reduced motion or IntersectionObserver is unavailable, reveal all
     if (
       typeof window === 'undefined' ||
       !('IntersectionObserver' in window) ||
       window.matchMedia('(prefers-reduced-motion: reduce)').matches
     ) {
-      document.querySelectorAll('.reveal-on-scroll').forEach((el) => {
-        el.classList.add('is-revealed');
-      });
+      document
+        .querySelectorAll(
+          '.reveal-on-scroll, .reveal-slide-left, .reveal-slide-right, .reveal-scale'
+        )
+        .forEach((el) => {
+          el.classList.add('is-revealed');
+        });
       return;
     }
 
@@ -22,19 +25,27 @@ export function useScrollReveal() {
       (entries) => {
         entries.forEach((entry) => {
           if (entry.isIntersecting) {
+            // Move-in transition
             entry.target.classList.add('is-revealed');
-            // Unobserve after revealing for optimal performance
-            observer.unobserve(entry.target);
+          } else {
+            // Move-out transition when scrolled well outside of viewport
+            // Only remove if it exited significantly to avoid flickering at the edge
+            const rect = entry.boundingClientRect;
+            if (rect.top > window.innerHeight || rect.bottom < 0) {
+              entry.target.classList.remove('is-revealed');
+            }
           }
         });
       },
       {
-        threshold: 0.12,
-        rootMargin: '0px 0px -40px 0px',
+        threshold: 0.08,
+        rootMargin: '0px 0px -30px 0px',
       }
     );
 
-    const elements = document.querySelectorAll('.reveal-on-scroll');
+    const selector =
+      '.reveal-on-scroll, .reveal-slide-left, .reveal-slide-right, .reveal-scale, .reveal-card';
+    const elements = document.querySelectorAll(selector);
     elements.forEach((el) => observer.observe(el));
 
     return () => {

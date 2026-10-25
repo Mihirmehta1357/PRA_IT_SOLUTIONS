@@ -39,8 +39,17 @@ export const SiteFooter: React.FC = () => {
           {/* Column 1: Registered Identity & Verified Credentials */}
           <div className="footer-col col-identity">
             <Link to="/" className="footer-logo">
-              <span className="footer-logo-monogram">{siteConfig.brandMonogram}</span>
-              <span className="footer-logo-sub">IT SOLUTIONS</span>
+              <img
+                src="/images/pra-logo.png"
+                alt="PRA IT SOLUTIONS"
+                className="footer-logo-img"
+                width={48}
+                height={48}
+              />
+              <div className="footer-logo-text">
+                <span className="footer-logo-monogram">{siteConfig.brandMonogram}</span>
+                <span className="footer-logo-sub">IT SOLUTIONS</span>
+              </div>
             </Link>
             <p className="footer-tagline">
               {siteConfig.tagline} Enterprise IT infrastructure, CCTV surveillance, biometric access control and disciplined managed support.

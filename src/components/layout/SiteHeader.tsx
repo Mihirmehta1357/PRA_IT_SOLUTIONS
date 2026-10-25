@@ -55,10 +55,19 @@ export const SiteHeader: React.FC = () => {
   return (
     <header className={`site-header ${isScrolled ? 'site-header-scrolled' : ''}`}>
       <div className="container header-container">
-        {/* Brand Logo */}
+        {/* Brand Logo with Official Emblem */}
         <Link to="/" className="brand-logo" aria-label="PRA IT SOLUTIONS Home">
-          <div className="brand-logo-monogram">PRA</div>
-          <div className="brand-logo-sub">IT SOLUTIONS</div>
+          <img
+            src="/images/pra-logo.png"
+            alt="PRA IT SOLUTIONS Logo"
+            className="brand-logo-img"
+            width={44}
+            height={44}
+          />
+          <div className="brand-logo-text">
+            <span className="brand-logo-monogram">PRA</span>
+            <span className="brand-logo-sub">IT SOLUTIONS</span>
+          </div>
         </Link>
 
         {/* Desktop Navigation */}

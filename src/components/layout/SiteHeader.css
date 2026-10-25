@@ -20,12 +20,32 @@
   height: 80px;
 }
 
-/* Brand Wordmark */
+/* Brand Wordmark & Official Emblem */
 .brand-logo {
   display: flex;
-  flex-direction: column;
+  align-items: center;
+  gap: 12px;
   text-decoration: none;
   line-height: 1;
+}
+
+.brand-logo-img {
+  width: 44px;
+  height: 44px;
+  object-fit: contain;
+  flex-shrink: 0;
+  border-radius: 6px;
+  transition: transform 0.28s cubic-bezier(0.16, 1, 0.3, 1), filter 0.28s ease;
+  filter: drop-shadow(0 2px 6px rgba(41, 26, 43, 0.12));
+}
+
+.brand-logo:hover .brand-logo-img {
+  transform: scale(1.06) rotate(1deg);
+}
+
+.brand-logo-text {
+  display: flex;
+  flex-direction: column;
 }
 
 .brand-logo-monogram {
